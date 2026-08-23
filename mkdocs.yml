@@ -1,5 +1,5 @@
 site_name: Python-Unterricht
-site_description: Tutorials, Codebeispiele und Aufgaben fuer den Unterricht
+site_description: Tutorials, Codebeispiele und Aufgaben für den Unterricht
 
 theme:
   name: material

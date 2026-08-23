@@ -24,7 +24,7 @@ Später installieren wir zusätzlich **Pygame Zero**, um grafische Spiele zu pro
 
 ## Teil 1: Python installieren
 
-![Downlaod Python](..\site\assets\images\Download_Python.png)
+![Download Python](assets/images/Download_Python.png)
 
 ### Windows
 
