@@ -24,6 +24,8 @@ Später installieren wir zusätzlich **Pygame Zero**, um grafische Spiele zu pro
 
 ## Teil 1: Python installieren
 
+![Downlaod Python](..\site\assets\images\Download_Python.png)
+
 ### Windows
 
 1. Öffne die offizielle Seite [python.org/downloads](https://www.python.org/downloads/).
@@ -178,12 +180,12 @@ Starte die Datei erneut. Klicke ins Terminal, gib deinen Namen ein und bestätig
 
 ### Was geschieht hier?
 
-| Code | Bedeutung |
-|---|---|
-| `input(...)` | Zeigt eine Frage an und wartet auf eine Eingabe. |
-| `name = ...` | Speichert die Eingabe in der Variable `name`. |
-| `print(...)` | Gibt Text im Terminal aus. |
-| `f"...{name}..."` | Setzt den gespeicherten Namen in den Text ein. |
+| Code              | Bedeutung                                        |
+| ----------------- | ------------------------------------------------ |
+| `input(...)`      | Zeigt eine Frage an und wartet auf eine Eingabe. |
+| `name = ...`      | Speichert die Eingabe in der Variable `name`.    |
+| `print(...)`      | Gibt Text im Terminal aus.                       |
+| `f"...{name}..."` | Setzt den gespeicherten Namen in den Text ein.   |
 
 ---
 
@@ -302,4 +304,3 @@ Wenn alle Pflichtpunkte erfüllt sind, bist du bereit für den Python-Kurs.
 - [Offizielle Python-Dokumentation für macOS](https://docs.python.org/3/using/mac.html)
 - [Offizielle Installationsanleitung für Pygame Zero](https://pygame-zero.readthedocs.io/en/latest/installation.html)
 - [DataCamp: Setting Up VS Code for Python](https://www.datacamp.com/tutorial/setting-up-vscode-python)
-
