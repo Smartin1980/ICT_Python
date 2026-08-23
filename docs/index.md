@@ -10,4 +10,4 @@ Hier findest du:
 
 ## Einstieg
 
-Beginne mit der [Installationsanleitung](installation.md) und schreibe danach dein [erstes Programm](erstes-programm.md).
+Beginne mit der [Installationsanleitung](python-vscode-installation.md) und schreibe danach dein [erstes Programm](erstes-programm.md).
