@@ -1,0 +1,13 @@
+site_name: Python-Unterricht
+site_description: Tutorials, Codebeispiele und Aufgaben fuer den Unterricht
+
+theme:
+  name: material
+  language: de
+
+nav:
+  - Startseite: index.md
+  - Installation: installation.md
+  - Erstes Programm: erstes-programm.md
+  - Aufgaben:
+      - Aufgabe 1: aufgaben/aufgabe-01.md
