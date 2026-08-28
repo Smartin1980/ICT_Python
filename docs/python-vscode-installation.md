@@ -77,6 +77,8 @@ Die genauen Zahlen dürfen anders aussehen. Entscheidend ist, dass die Version m
 
 ## Teil 2: Visual Studio Code installieren
 
+![Download VS Code](assets/images/Download_VS_Code.png)
+
 1. Öffne [code.visualstudio.com](https://code.visualstudio.com/).
 2. Lade die passende Version für dein Betriebssystem herunter.
 3. Öffne die Installationsdatei.
