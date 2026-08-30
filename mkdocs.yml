@@ -8,6 +8,7 @@ theme:
 nav:
   - Startseite: index.md
   - Installation Python & VS-Code: python-vscode-installation.md
+  - vscode-erste-schritte.md
   # - Installation: installation.md
   - Erstes Programm: erstes-programm.md
   - Aufgaben:
