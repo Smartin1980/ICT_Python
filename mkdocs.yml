@@ -7,12 +7,13 @@ theme:
 
 nav:
   - Startseite: index.md
-  - Installation Python & VS-Code: python-vscode-installation.md
-  - VS Code Erste Schritte: vscode-erste-schritte.md
-  # - Installation: installation.md
-  - Erstes Programm: erstes-programm.md
-  - Aufgaben:
-      - Aufgabe 1: aufgaben/aufgabe-01.md
+  - Setup:
+      - Installation Python & VS-Code: python-vscode-installation.md
+      - VS Code Erste Schritte: vscode-erste-schritte.md
+      - Installation: installation.md
+      - Erstes Programm: erstes-programm.md
+  #- Aufgaben:
+  #    - Aufgabe 1: aufgaben/aufgabe-01.md
   - Mini-Games:
       - Übersicht: mini-games/index.md
       - 1. Game Intro: mini-games/01-game-intro.md
