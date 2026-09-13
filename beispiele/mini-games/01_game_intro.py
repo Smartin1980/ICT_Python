@@ -1,0 +1,5 @@
+print("====================")
+print("   PYTHON ADVENTURE")
+print("====================")
+print()
+print("Willkommen zu deinem ersten Python-Spiel!")

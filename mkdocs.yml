@@ -8,8 +8,19 @@ theme:
 nav:
   - Startseite: index.md
   - Installation Python & VS-Code: python-vscode-installation.md
-  - vscode-erste-schritte.md
+  - VS Code Erste Schritte: vscode-erste-schritte.md
   # - Installation: installation.md
   - Erstes Programm: erstes-programm.md
   - Aufgaben:
       - Aufgabe 1: aufgaben/aufgabe-01.md
+  - Mini-Games:
+      - Übersicht: mini-games/index.md
+      - 1. Game Intro: mini-games/01-game-intro.md
+      - 2. Variablen & Datentypen: mini-games/02-variablen-datentypen.md
+      - 3. Operatoren: mini-games/03-operatoren.md
+      - 4. Eingaben: mini-games/04-input.md
+      - 5. Verzweigungen: mini-games/05-verzweigungen.md
+      - 6. Schleifen: mini-games/06-schleifen.md
+      - 7. Listen: mini-games/07-listen.md
+      - 8. Funktionen: mini-games/08-funktionen.md
+      - 9. Final Game: mini-games/09-final-game.md
