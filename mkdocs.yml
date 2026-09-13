@@ -27,3 +27,12 @@ nav:
       - 7. Listen: mini-games/07-listen.md
       - 8. Funktionen: mini-games/08-funktionen.md
       - 9. Final Game: mini-games/09-final-game.md
+  - KI & Snake:
+      - Übersicht: ki-snake/index.md
+      - 1. KI verstehen: ki-snake/01-ki-verstehen.md
+      - 2. Umgebung einrichten: ki-snake/02-setup.md
+      - 3. Mein Spielfenster: ki-snake/03-spielfenster.md
+      - 4. Bewegung mit KI: ki-snake/04-bewegung.md
+      - 5. Einfaches Snake: ki-snake/05-snake.md
+      - 6. Kreativ weiterbauen: ki-snake/06-weiterbauen.md
+      - Für Lehrpersonen: ki-snake/lehrpersonen.md

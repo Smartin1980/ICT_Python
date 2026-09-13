@@ -7,6 +7,7 @@ Willkommen im Python-Kurs! Hier lernst du Schritt für Schritt, eigene Programme
 1. [Python und VS Code installieren](python-vscode-installation.md): Richte deinen Computer ein und prüfe die Installation mit der Abschlusskontrolle.
 2. [VS Code Erste Schritte](vscode-erste-schritte.md): Lerne die Oberfläche kennen, schreibe deine ersten Programme und teste sie selbst.
 3. [Mini-Games starten](mini-games/index.md): Beginne mit dem Game Intro und arbeite dich bis zu Python Quest vor.
+4. [KI & Snake](ki-snake/index.md): Nutze danach KI als Lernhilfe und entwickle ein einfaches grafisches Snake mit Pygame.
 
 Nach «VS Code Erste Schritte» kannst du mit der freiwilligen [Zusatzübung Begrüssung](aufgaben/aufgabe-01.md) die Eingaben nochmals üben oder direkt mit den Mini-Games beginnen.
 
@@ -25,5 +26,7 @@ Speichere deine ersten Programme im Ordner `python-kurs` und deine eigenen Mini-
 Wenn du auch die Projektdateien von der Lehrperson erhalten hast, findest du die fertigen Mini-Game-Vorlagen dort unter `beispiele/mini-games`. Zum Bearbeiten der Aufgaben genügt der Code auf den Lernseiten.
 
 ## Später: grafische Spiele
+
+Im Bereich [KI & Snake](ki-snake/index.md) findest du die Pygame-Installation, drei vollständige Programm-Etappen und Aufgaben zum Prüfen von KI-Code. Die ersten zwei Stunden sind für Theorie, Setup und eine erste kleine Änderung gedacht. Das vollständige Spiel folgt in der nächsten Unterrichtseinheit.
 
 Als spätere Ergänzung gibt es in den Projektdateien **Achtung, Hai!** (`beispiele/Achtung_Hai`) und **Snake Advanced** (`beispiele/Snake_Advanced`). Dafür werden zusätzliche Pakete benötigt: Pygame Zero beziehungsweise Pygame. Wenn ihr diese Spiele im Unterricht verwendet, findet ihr Installation und Bedienung jeweils in der Datei `README.md` im Spielordner.

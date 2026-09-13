@@ -20,6 +20,8 @@ Für den Kurs benötigen wir drei Bestandteile:
 
 Für die neun [Mini-Games](mini-games/index.md) brauchst du keine zusätzlichen Python-Pakete. **Pygame Zero** kommt erst später beim grafischen Spiel **Achtung, Hai!** zum Einsatz.
 
+Für den anschliessenden Unterrichtsbereich **KI & Snake** verwenden wir **Pygame**. Die passende Einrichtung folgt dort auf der Seite [Umgebung einrichten](ki-snake/02-setup.md).
+
 ---
 
 ## Teil 1: Python installieren
