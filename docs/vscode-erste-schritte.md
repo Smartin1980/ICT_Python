@@ -1,15 +1,13 @@
 ---
-layout: default
 title: VS Code bedienen
-nav_order: 2
-description: Erste Schritte mit VS Code für den Python-Kurs
+description: Erste Schritte mit VS Code für den python-kurs
 ---
 
 # Erste Schritte mit VS Code
 
 VS Code ist unser **digitaler Arbeitsplatz zum Programmieren**. Ähnlich wie Word beim Schreiben von Texten hilft, unterstützt uns VS Code beim Schreiben von Programmen.
 
-Für unseren Kurs brauchst du in VS Code zunächst nur wenige Funktionen.
+Für unseren Kurs brauchst du in VS Code zunächst nur wenige Funktionen. Voraussetzung ist die abgeschlossene [Installation von Python und VS Code](python-vscode-installation.md). Wir wiederholen hier die beiden Programme aus der Installation, damit du den Umgang mit dem Editor übst.
 
 ## Lernziele
 
@@ -38,26 +36,31 @@ Nach dieser Anleitung kannst du:
 
 ## 1. Kursordner erstellen
 
-Erstelle unter **Dokumente** einen neuen Ordner:
+Verwende den Ordner aus der Installation. Falls er noch fehlt, erstelle unter **Dokumente** einen neuen Ordner:
 
 ```text
-Python-Kurs
+python-kurs
 ```
 
 Später kann dieser Ordner beispielsweise so aufgebaut sein:
 
 ```text
-Python-Kurs
-├── 01_Grundlagen
-├── 02_Beispiele
-└── 03_Spiel
+python-kurs
+├── hallo.py
+├── begruessung.py
+└── mini-games
+    ├── 01_game_intro.py
+    ├── 02_character_creator.py
+    └── ...
 ```
+
+Die Dateien entstehen im Laufe der Übungen; `begruessung.py` gehört zur freiwilligen Zusatzübung. Speichere deine eigenen Spiele unter `python-kurs/mini-games`. Die fertigen Vorlagen liegen im Kursprojekt unter `beispiele/mini-games` und stehen auch vollständig auf den Lernseiten.
 
 ## 2. Kursordner in VS Code öffnen
 
 1. Starte VS Code.
 2. Wähle **Datei → Ordner öffnen**.
-3. Wähle den Ordner `Python-Kurs` aus.
+3. Wähle den Ordner `python-kurs` aus.
 4. Klicke auf **Ordner auswählen**.
 
 > **Merksatz:** Öffne in VS Code immer den ganzen Kursordner und nicht nur eine einzelne Datei.
@@ -78,8 +81,7 @@ Die Dateiendung `.py` zeigt dem Computer und VS Code, dass die Datei ein Python-
 Tippe diesen Code im Editor ab:
 
 ```python
-print("Hallo Welt!")
-print("Mein erstes Python-Programm funktioniert.")
+print("Hallo Python!")
 ```
 
 Achte besonders auf:
@@ -110,8 +112,7 @@ Klicke oben rechts auf:
 Im Terminal sollte diese Ausgabe erscheinen:
 
 ```text
-Hallo Welt!
-Mein erstes Python-Programm funktioniert.
+Hallo Python!
 ```
 
 > **Merksatz:** Oben im Editor schreibst du das Programm. Unten im Terminal siehst du, was das Programm macht.
@@ -195,6 +196,8 @@ Eine Fehlermeldung bedeutet nicht, dass du nicht programmieren kannst. Sie ist e
 
 ## Das solltest du jetzt können
 
+Die Häkchen dienen zur Kontrolle und werden nach dem Neuladen nicht gespeichert.
+
 - [ ] Ich kann meinen Kursordner öffnen.
 - [ ] Ich kann eine `.py`-Datei erstellen.
 - [ ] Ich kann Python-Code schreiben und speichern.
@@ -202,4 +205,4 @@ Eine Fehlermeldung bedeutet nicht, dass du nicht programmieren kannst. Sie ist e
 - [ ] Ich kenne den Unterschied zwischen Editor und Terminal.
 - [ ] Ich kann eine einfache Fehlermeldung untersuchen.
 
-Wenn du alle Punkte abhaken kannst, bist du bereit für dein nächstes Python-Programm.
+Wenn du alle Punkte abhaken kannst, untersuche als Nächstes [dein erstes Programm](erstes-programm.md). Danach startest du mit den [Mini-Games](mini-games/index.md).

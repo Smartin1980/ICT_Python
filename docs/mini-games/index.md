@@ -28,10 +28,10 @@ Du kannst den Code vollständig kopieren und starten. Versuche aber zuerst selbs
 
 ## Programme starten
 
-Speichere deine Datei mit der Endung `.py`. Öffne in VS Code ein Terminal im Ordner deiner Datei und starte zum Beispiel:
+Lege für deine eigenen Lösungen den Unterordner `mini-games` in deinem Kursordner `python-kurs` an. Speichere dort deine Datei mit der Endung `.py`. Öffne in VS Code ein Terminal im Ordner deiner Datei und starte zum Beispiel:
 
 ```text
 python 01_game_intro.py
 ```
 
-Unter Windows kannst du auch `py 01_game_intro.py` verwenden. Bei Fragen im Spiel klickst du ins Terminal, tippst deine Antwort und drückst Enter.
+Unter Windows kannst du auch `py 01_game_intro.py` verwenden. Unter macOS und Linux verwendest du `python3 01_game_intro.py`. Bei Fragen im Spiel klickst du ins Terminal, tippst deine Antwort und drückst Enter.

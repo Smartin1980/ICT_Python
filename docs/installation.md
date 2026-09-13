@@ -1,27 +1,28 @@
-# Python installieren
+# Setup-Kurzcheckliste
 
-## Voraussetzungen
+Diese Seite ist für dich, wenn du Python und VS Code schon kennst oder prüfen möchtest, ob dein Computer bereit ist. Die einzelnen Installationsschritte für Windows und macOS findest du in der [ausführlichen Anleitung](python-vscode-installation.md).
 
-- Ein Computer mit Windows, macOS oder Linux
-- Internetzugang
-- Ein Texteditor oder eine Entwicklungsumgebung
+## Installation prüfen
 
-## Python installieren
+Öffne ein Terminal und verwende den passenden Befehl:
 
-1. Oeffne die offizielle Python-Website: [python.org](https://www.python.org/downloads/)
-2. Lade die aktuelle Version fuer dein Betriebssystem herunter.
-3. Starte die Installation.
-4. Aktiviere unter Windows die Option **Add Python to PATH**.
-5. Schliesse die Installation ab.
+| Betriebssystem | Befehl |
+| --- | --- |
+| Windows | `python --version`, alternativ `py --version` |
+| macOS / Linux | `python3 --version` |
 
-## Installation pruefen
+Es muss eine Python-3-Versionsnummer erscheinen. Falls Python unter Linux fehlt, richte es mit der Lehrperson über die Paketverwaltung deiner Distribution ein.
 
-Oeffne ein Terminal und fuehre folgenden Befehl aus:
+## Bereit für die Mini-Games?
 
-```powershell
-python --version
-```
+- [ ] Python 3 ist installiert und der Versionsbefehl funktioniert.
+- [ ] VS Code und die Python-Erweiterung von Microsoft sind installiert.
+- [ ] Dein eigener Ordner `python-kurs` ist in VS Code geöffnet.
+- [ ] Über `Python: Select Interpreter` ist deine Python-Installation ausgewählt.
+- [ ] Eine Datei `hallo.py` mit `print("Hallo Python!")` lässt sich starten.
 
-Es sollte eine Python-Versionsnummer angezeigt werden.
+Die Häkchen dienen zur Kontrolle auf dieser Seite und werden nach dem Neuladen nicht gespeichert.
 
-Falls der Befehl nicht funktioniert, pruefe die Installation erneut oder frage die Lehrperson.
+Für die neun Mini-Games brauchst du keine Zusatzpakete. Pygame Zero wird erst für **Achtung, Hai!** benötigt.
+
+[Weiter: VS Code bedienen](vscode-erste-schritte.md)

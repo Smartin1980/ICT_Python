@@ -1,2 +1,2 @@
 name = input("Wie heisst du? ")
-Print("Hallo, " + name)
+print("Hallo", name)

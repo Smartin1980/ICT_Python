@@ -6,7 +6,7 @@ eingegeben und auf dem Spielbrett animiert werden.
 ## Installation
 
 1. Python installieren.
-2. In VS Code oder einer Eingabeaufforderung im Projektordner ausführen:
+2. In VS Code oder einer Eingabeaufforderung im Spielordner `beispiele/Achtung_Hai` ausführen:
 
    ```bash
    python -m pip install pgzero
@@ -50,7 +50,7 @@ Auch Folgen ohne Leerzeichen wie `VVLVV` funktionieren.
 
 ## Anpassungen für den Unterricht
 
-Im oberen Teil von `main.py` lassen sich die Felder ändern:
+Im oberen Teil von `achtung_hai.py` lassen sich die Felder ändern. `main.py` ist der Einstiegspunkt zum Starten des Spiels:
 
 ```python
 START = (6, 3)
@@ -60,5 +60,5 @@ GOALS = {...}
 ```
 
 Die Koordinaten werden als `(Zeile, Spalte)` notiert und beginnen bei `0`.
-Die Ausführungsgeschwindigkeit steht in `start_run()` und
+Die Ausführungsgeschwindigkeit steht ebenfalls in `achtung_hai.py`, in `start_run()` und
 `execute_next_command()` bei `1.0` Sekunden.

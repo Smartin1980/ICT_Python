@@ -18,7 +18,7 @@ Für den Kurs benötigen wir drei Bestandteile:
 2. **Visual Studio Code**, kurz **VS Code**, ist unser Programmiereditor.
 3. Die **Python-Erweiterung für VS Code** verbindet den Editor mit Python.
 
-Später installieren wir zusätzlich **Pygame Zero**, um grafische Spiele zu programmieren.
+Für die neun [Mini-Games](mini-games/index.md) brauchst du keine zusätzlichen Python-Pakete. **Pygame Zero** kommt erst später beim grafischen Spiel **Achtung, Hai!** zum Einsatz.
 
 ---
 
@@ -122,7 +122,7 @@ Speichere deine Programme nicht irgendwo zwischen Downloads und Dokumenten. Erst
 3. Öffne den Ordner `python-kurs`.
 4. Bestätige bei einer Sicherheitsabfrage, dass du diesem selbst erstellten Ordner vertraust.
 
-Im Explorer auf der linken Seite sollte nun der Ordner `python-kurs` erscheinen.
+Im Explorer auf der linken Seite sollte nun der Ordner `python-kurs` erscheinen. Hier speicherst du deine eigenen Lösungen. Lege darin später den Unterordner `mini-games` für die neun Spiele an. Die Vorlagen im Kursprojekt liegen unter `beispiele/mini-games`; du findest ihren vollständigen Code auch auf den Lernseiten.
 
 ---
 
@@ -175,7 +175,7 @@ Ersetze den Inhalt von `hallo.py` durch:
 
 ```python
 name = input("Wie heisst du? ")
-print(f"Hallo {name}, willkommen im Python-Kurs!")
+print("Hallo", name)
 ```
 
 Starte die Datei erneut. Klicke ins Terminal, gib deinen Namen ein und bestätige mit der Eingabetaste.
@@ -187,13 +187,13 @@ Starte die Datei erneut. Klicke ins Terminal, gib deinen Namen ein und bestätig
 | `input(...)`      | Zeigt eine Frage an und wartet auf eine Eingabe. |
 | `name = ...`      | Speichert die Eingabe in der Variable `name`.    |
 | `print(...)`      | Gibt Text im Terminal aus.                       |
-| `f"...{name}..."` | Setzt den gespeicherten Namen in den Text ein.   |
+| `print("Hallo", name)` | Gibt die Begrüssung und den Namen mit einem Leerzeichen dazwischen aus. |
 
 ---
 
-## Teil 7: Pygame Zero installieren
+## Optional für später: Pygame Zero installieren
 
-Pygame Zero benötigen wir erst für das grafische Spiel **Catch & Dodge**. Die Installation kann deshalb auch gemeinsam im Unterricht erfolgen.
+Pygame Zero benötigen wir erst für das grafische Spiel **Achtung, Hai!** im Projektordner `beispiele/Achtung_Hai`. Die Installation kann gemeinsam im Unterricht erfolgen. Für die Mini-Games kannst du diesen Abschnitt überspringen.
 
 1. Öffne in VS Code über **Terminal → New Terminal** ein neues Terminal.
 2. Gib unter Windows ein:
@@ -217,14 +217,16 @@ python3 -m pip install pgzero
 3. Kontrolliere die Installation:
 
 ```powershell
-python -m pgzero --version
+python -m pip show pgzero
 ```
 
 Unter macOS lautet der Befehl entsprechend:
 
 ```bash
-python3 -m pgzero --version
+python3 -m pip show pgzero
 ```
+
+Falls du unter Windows `py` verwendest, prüfe mit `py -m pip show pgzero`. Die Ausgabe sollte unter anderem `Name: pgzero` und eine Versionsnummer enthalten. Verwende zum Installieren und Prüfen dieselbe Python-Installation wie in VS Code.
 
 > Pygame Zero wird offiziell als Paket `pgzero` installiert. Dabei wird auch das benötigte Pygame mitinstalliert.
 
@@ -273,7 +275,7 @@ Klicke unten in das **Terminal** und nicht in das Fenster **Output/Ausgabe**. Pr
 
 ## Abschlusskontrolle
 
-Setze einen Haken, wenn der Schritt funktioniert:
+Setze einen Haken, wenn der Schritt funktioniert. Die Häkchen werden nach dem Neuladen der Seite nicht gespeichert:
 
 - [ ] Python 3 ist installiert.
 - [ ] `python --version`, `py --version` oder `python3 --version` zeigt eine Version an.
@@ -281,11 +283,12 @@ Setze einen Haken, wenn der Schritt funktioniert:
 - [ ] Die Erweiterung **Python von Microsoft** ist installiert.
 - [ ] Der Ordner `python-kurs` ist in VS Code geöffnet.
 - [ ] Der richtige Python-Interpreter ist ausgewählt.
-- [ ] `hallo.py` gibt `Hallo Python!` aus.
+- [ ] Das erste Testprogramm hat `Hallo Python!` ausgegeben.
 - [ ] Das Programm mit `input()` kann deinen Namen einlesen.
-- [ ] Pygame Zero ist installiert oder wird später gemeinsam installiert.
 
-Wenn alle Pflichtpunkte erfüllt sind, bist du bereit für den Python-Kurs.
+Optional für später: Pygame Zero kannst du gemeinsam mit der Lehrperson vor **Achtung, Hai!** installieren.
+
+Wenn alle Pflichtpunkte erfüllt sind, geht es weiter mit [VS Code bedienen](vscode-erste-schritte.md). Wenn du den Editor bereits kennst, kannst du direkt [dein erstes Programm untersuchen](erstes-programm.md).
 
 ---
 
