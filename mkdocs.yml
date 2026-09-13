@@ -15,7 +15,6 @@ nav:
   - Setup:
       - Installation Python & VS-Code: python-vscode-installation.md
       - VS Code Erste Schritte: vscode-erste-schritte.md
-  - Zusatzübungen:
       - Begrüssung: aufgaben/aufgabe-01.md
   - Mini-Games:
       - Übersicht: mini-games/index.md
