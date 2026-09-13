@@ -1,5 +1,5 @@
 print("====================")
-print("   PYTHON ADVENTURE")
+print("   PYTHON ADVENTURE 2 ")
 print("====================")
 print()
 print("Willkommen zu deinem ersten Python-Spiel!")
