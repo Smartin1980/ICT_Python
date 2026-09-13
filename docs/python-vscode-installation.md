@@ -5,7 +5,7 @@ description: Schritt-für-Schritt-Anleitung für den Python-Kurs
 
 # Python und Visual Studio Code installieren
 
-In dieser Anleitung richtest du deinen Computer für den Python-Kurs ein. Am Ende kannst du in Visual Studio Code ein erstes Python-Programm schreiben und ausführen.
+In dieser Anleitung richtest du deinen Computer für den Python-Kurs ein. Am Ende sind Python, VS Code und die Python-Erweiterung installiert. In der nächsten Anleitung lernst du die Oberfläche kennen und schreibst danach deine ersten Programme.
 
 > **Zeitbedarf:** ungefähr 20–30 Minuten  
 > **Du benötigst:** einen Computer mit Windows oder macOS und eine Internetverbindung
@@ -126,71 +126,6 @@ Im Explorer auf der linken Seite sollte nun der Ordner `python-kurs` erscheinen.
 
 ---
 
-## Teil 5: Das erste Python-Programm
-
-### Datei erstellen
-
-1. Klicke im VS-Code-Explorer auf **New File**.
-2. Nenne die Datei `hallo.py`.
-
-Die Endung `.py` zeigt, dass es sich um eine Python-Datei handelt.
-
-### Programm schreiben
-
-Schreibe folgende Zeile in die Datei:
-
-```python
-print("Hallo Python!")
-```
-
-Speichere die Datei mit `Ctrl` + `S` beziehungsweise auf dem Mac mit `Cmd` + `S`.
-
-### Python-Interpreter auswählen
-
-Der **Interpreter** ist das Programm, das deinen Python-Code ausführt.
-
-1. Öffne die Befehlspalette mit `Ctrl` + `Shift` + `P` beziehungsweise `Cmd` + `Shift` + `P`.
-2. Suche nach `Python: Select Interpreter`.
-3. Wähle die installierte Python-3-Version aus.
-
-Häufig zeigt VS Code die gewählte Version danach unten in der Statusleiste an.
-
-### Programm starten
-
-Klicke oben rechts im Editor auf die dreieckige Schaltfläche **Run Python File**.
-
-VS Code öffnet unten ein Terminal. Dort sollte stehen:
-
-```text
-Hallo Python!
-```
-
-🎉 Gratulation! Du hast dein erstes Python-Programm ausgeführt.
-
----
-
-## Teil 6: Ein kleines interaktives Programm
-
-Ersetze den Inhalt von `hallo.py` durch:
-
-```python
-name = input("Wie heisst du? ")
-print("Hallo", name)
-```
-
-Starte die Datei erneut. Klicke ins Terminal, gib deinen Namen ein und bestätige mit der Eingabetaste.
-
-### Was geschieht hier?
-
-| Code              | Bedeutung                                        |
-| ----------------- | ------------------------------------------------ |
-| `input(...)`      | Zeigt eine Frage an und wartet auf eine Eingabe. |
-| `name = ...`      | Speichert die Eingabe in der Variable `name`.    |
-| `print(...)`      | Gibt Text im Terminal aus.                       |
-| `print("Hallo", name)` | Gibt die Begrüssung und den Namen mit einem Leerzeichen dazwischen aus. |
-
----
-
 ## Optional für später: Pygame Zero installieren
 
 Pygame Zero benötigen wir erst für das grafische Spiel **Achtung, Hai!** im Projektordner `beispiele/Achtung_Hai`. Die Installation kann gemeinsam im Unterricht erfolgen. Für die Mini-Games kannst du diesen Abschnitt überspringen.
@@ -241,18 +176,6 @@ Falls du unter Windows `py` verwendest, prüfe mit `py -m pip show pgzero`. Die 
 - Kontrolliere, ob Python wirklich installiert wurde.
 - Installiere Python nochmals und aktiviere **Add Python to PATH**, falls diese Option angeboten wird.
 
-### VS Code zeigt «Select Interpreter»
-
-Öffne die Befehlspalette und wähle über **Python: Select Interpreter** deine Python-3-Installation aus.
-
-### Die Run-Schaltfläche fehlt
-
-Kontrolliere:
-
-- Ist die Datei mit `.py` gespeichert?
-- Ist die Erweiterung **Python von Microsoft** installiert?
-- Wurde ein Python-Interpreter ausgewählt?
-
 ### `pip` wurde nicht gefunden
 
 Verwende nicht nur `pip`, sondern rufe es über Python auf:
@@ -267,10 +190,6 @@ Unter Windows kann auch Folgendes funktionieren:
 py -m pip install pgzero
 ```
 
-### Das Programm läuft, aber ich kann nichts eingeben
-
-Klicke unten in das **Terminal** und nicht in das Fenster **Output/Ausgabe**. Programme mit `input()` benötigen das Terminal.
-
 ---
 
 ## Abschlusskontrolle
@@ -282,13 +201,10 @@ Setze einen Haken, wenn der Schritt funktioniert. Die Häkchen werden nach dem N
 - [ ] VS Code ist installiert.
 - [ ] Die Erweiterung **Python von Microsoft** ist installiert.
 - [ ] Der Ordner `python-kurs` ist in VS Code geöffnet.
-- [ ] Der richtige Python-Interpreter ist ausgewählt.
-- [ ] Das erste Testprogramm hat `Hallo Python!` ausgegeben.
-- [ ] Das Programm mit `input()` kann deinen Namen einlesen.
 
 Optional für später: Pygame Zero kannst du gemeinsam mit der Lehrperson vor **Achtung, Hai!** installieren.
 
-Wenn alle Pflichtpunkte erfüllt sind, geht es weiter mit [VS Code bedienen](vscode-erste-schritte.md). Wenn du den Editor bereits kennst, kannst du direkt [dein erstes Programm untersuchen](erstes-programm.md).
+Wenn alle Pflichtpunkte erfüllt sind, geht es weiter mit [VS Code Erste Schritte](vscode-erste-schritte.md). Dort lernst du zuerst Explorer, Editor und Terminal kennen und schreibst anschliessend deine ersten Programme.
 
 ---
 
@@ -299,7 +215,8 @@ Wenn alle Pflichtpunkte erfüllt sind, geht es weiter mit [VS Code bedienen](vsc
 - Auf Schulgeräten vorab prüfen, ob Installationen und `pip` durch Richtlinien blockiert werden.
 - Für alle Lernenden dieselbe Ordnerstruktur verwenden.
 - Pygame Zero erst installieren, wenn es im Kurs benötigt wird.
-- Bei Problemen zuerst Interpreter, Terminalbefehl und Dateiendung kontrollieren.
+- Bei Installationsproblemen zuerst den Versionsbefehl und die installierte Python-Erweiterung kontrollieren.
+- Die ersten Programme folgen in «VS Code Erste Schritte», nachdem die Oberfläche erklärt wurde.
 
 ## Quellen und weiterführende Anleitungen
 

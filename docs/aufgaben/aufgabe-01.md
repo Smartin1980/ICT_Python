@@ -1,6 +1,6 @@
 # Zusatzübung: Begrüssung
 
-Diese freiwillige Übung vertieft [dein erstes Programm](../erstes-programm.md). Versuche zuerst selbst eine Lösung zu schreiben.
+Diese freiwillige Übung vertieft die Namensübung aus [VS Code Erste Schritte](../vscode-erste-schritte.md#ubung-dein-name). Versuche zuerst selbst eine Lösung zu schreiben.
 
 ## Erst überlegen
 

@@ -1,13 +1,13 @@
 ---
 title: VS Code bedienen
-description: Erste Schritte mit VS Code für den python-kurs
+description: Erste Schritte mit VS Code für den Python-Kurs
 ---
 
 # Erste Schritte mit VS Code
 
 VS Code ist unser **digitaler Arbeitsplatz zum Programmieren**. Ähnlich wie Word beim Schreiben von Texten hilft, unterstützt uns VS Code beim Schreiben von Programmen.
 
-Für unseren Kurs brauchst du in VS Code zunächst nur wenige Funktionen. Voraussetzung ist die abgeschlossene [Installation von Python und VS Code](python-vscode-installation.md). Wir wiederholen hier die beiden Programme aus der Installation, damit du den Umgang mit dem Editor übst.
+Für unseren Kurs brauchst du in VS Code zunächst nur wenige Funktionen. Voraussetzung ist die abgeschlossene [Installation von Python und VS Code](python-vscode-installation.md). Hier lernst du zuerst die Oberfläche kennen. Anschliessend schreibst und startest du deine ersten beiden Programme.
 
 ## Lernziele
 
@@ -101,7 +101,17 @@ Speichere dein Programm mit:
 
 Ein weisser Punkt neben dem Dateinamen bedeutet, dass die Datei noch nicht gespeichert wurde.
 
-## 6. Programm starten
+## 6. Python-Interpreter auswählen
+
+Der **Interpreter** ist das Programm, das deinen Python-Code ausführt.
+
+1. Öffne die Befehlspalette mit `Ctrl` + `Shift` + `P` beziehungsweise `Cmd` + `Shift` + `P`.
+2. Suche nach `Python: Select Interpreter`.
+3. Wähle die installierte Python-3-Version aus.
+
+Häufig zeigt VS Code die gewählte Version danach unten in der Statusleiste an.
+
+## 7. Programm starten
 
 Klicke oben rechts auf:
 
@@ -109,7 +119,7 @@ Klicke oben rechts auf:
 ▶ Python-Datei ausführen
 ```
 
-Im Terminal sollte diese Ausgabe erscheinen:
+VS Code öffnet unten ein Terminal. Dort sollte diese Ausgabe erscheinen:
 
 ```text
 Hallo Python!
@@ -135,7 +145,15 @@ Beim Programmieren wiederholst du immer denselben Ablauf:
 
 ## Übung: Dein Name
 
-Ersetze den bisherigen Code durch dieses Programm:
+### Erst überlegen
+
+- Wo soll das Programm auf deinen Namen warten?
+- Wie kann es sich die Eingabe merken?
+- Was sollte sich ändern, wenn jemand anderes das Programm startet?
+
+### Dein Programm
+
+Ersetze den bisherigen Code in `hallo.py` durch dieses vollständige Programm. Es entspricht der Vorlage `beispiele/hallo.py` im Kursprojekt:
 
 ```python
 name = input("Wie heisst du? ")
@@ -157,11 +175,36 @@ Wie heisst du? Alex
 Hallo Alex
 ```
 
-Bei `input()` wartet Python auf eine Eingabe. Klicke dazu zuerst in das Terminal, gib deine Antwort ein und drücke **Enter**.
+Bei `input()` wartet Python auf eine Eingabe. Klicke dazu zuerst in das Terminal, gib deine Antwort ein und drücke **Enter**. Verwende das **Terminal**, nicht das Fenster **Output/Ausgabe**.
+
+### Was geschieht hier?
+
+| Code              | Bedeutung                                        |
+| ----------------- | ------------------------------------------------ |
+| `input(...)`      | Zeigt eine Frage an und wartet auf eine Eingabe. |
+| `name = ...`      | Speichert die Eingabe in der Variable `name`.    |
+| `print(...)`      | Gibt Text im Terminal aus.                       |
+| `print("Hallo", name)` | Gibt die Begrüssung und den Namen mit einem Leerzeichen dazwischen aus. |
+
+### Teste dein Programm
+
+Starte die Datei nochmals und gib einen anderen Namen ein. Passt sich die Begrüssung an? Prüfe auch einen Namen mit Leerzeichen, zum Beispiel `Anna Maria`. Erkläre anschliessend, welche Zeile die Eingabe speichert und welche sie ausgibt.
 
 ---
 
 ## Wenn etwas nicht funktioniert
+
+### VS Code zeigt «Select Interpreter»
+
+Öffne die Befehlspalette und wähle über **Python: Select Interpreter** deine Python-3-Installation aus.
+
+### Die Run-Schaltfläche fehlt
+
+Kontrolliere:
+
+- Ist die Datei mit `.py` gespeichert?
+- Ist die Erweiterung **Python von Microsoft** installiert?
+- Wurde ein Python-Interpreter ausgewählt?
 
 ### Das Programm startet nicht
 
@@ -201,8 +244,12 @@ Die Häkchen dienen zur Kontrolle und werden nach dem Neuladen nicht gespeichert
 - [ ] Ich kann meinen Kursordner öffnen.
 - [ ] Ich kann eine `.py`-Datei erstellen.
 - [ ] Ich kann Python-Code schreiben und speichern.
-- [ ] Ich kann ein Programm starten.
+- [ ] Ich kann den Python-Interpreter auswählen.
+- [ ] Mein erstes Programm hat `Hallo Python!` ausgegeben.
+- [ ] Mein Programm mit `input()` kann meinen Namen einlesen.
 - [ ] Ich kenne den Unterschied zwischen Editor und Terminal.
 - [ ] Ich kann eine einfache Fehlermeldung untersuchen.
 
-Wenn du alle Punkte abhaken kannst, untersuche als Nächstes [dein erstes Programm](erstes-programm.md). Danach startest du mit den [Mini-Games](mini-games/index.md).
+Wenn du alle Punkte abhaken kannst, startest du mit den [Mini-Games](mini-games/index.md).
+
+Möchtest du Eingaben vorher noch etwas üben? Löse die freiwillige [Zusatzübung Begrüssung](aufgaben/aufgabe-01.md).

@@ -4,10 +4,9 @@ Willkommen im Python-Kurs! Hier lernst du die Grundlagen mit neun kleinen Spiele
 
 ## Dein Einstieg
 
-1. [Python und VS Code installieren](python-vscode-installation.md): Richte deinen Computer ein. Wenn du dich bereits auskennst, genügt die [Setup-Kurzcheckliste](installation.md).
-2. [VS Code bedienen](vscode-erste-schritte.md): Lerne, Dateien zu erstellen, zu speichern und auszuführen.
-3. [Dein erstes Programm](erstes-programm.md): Verstehe die Begrüssung aus der Einführung und teste sie selbst.
-4. [Mini-Games starten](mini-games/index.md): Beginne mit dem Game Intro und arbeite dich bis zu Python Quest vor.
+1. [Python und VS Code installieren](python-vscode-installation.md): Richte deinen Computer ein und prüfe die Installation mit der Abschlusskontrolle.
+2. [VS Code Erste Schritte](vscode-erste-schritte.md): Lerne die Oberfläche kennen, schreibe deine ersten Programme und teste sie selbst.
+3. [Mini-Games starten](mini-games/index.md): Beginne mit dem Game Intro und arbeite dich bis zu Python Quest vor.
 
 Die [Zusatzübung Begrüssung](aufgaben/aufgabe-01.md) ist freiwillig. Sie hilft dir, Eingaben nochmals selbstständig zu üben.
 
