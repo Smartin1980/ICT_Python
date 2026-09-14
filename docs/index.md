@@ -7,7 +7,7 @@ Willkommen im Python-Kurs! Hier lernst du Schritt für Schritt, eigene Programme
 1. [Python und VS Code installieren](python-vscode-installation.md): Richte deinen Computer ein und prüfe die Installation mit der Abschlusskontrolle.
 2. [VS Code Erste Schritte](vscode-erste-schritte.md): Lerne die Oberfläche kennen, schreibe deine ersten Programme und teste sie selbst.
 3. [Mini-Games starten](mini-games/index.md): Beginne mit dem Game Intro und arbeite dich bis zu Python Quest vor.
-4. [KI & Snake](ki-snake/index.md): Nutze danach KI als Lernhilfe und entwickle ein einfaches grafisches Snake mit Pygame.
+<!-- 4. [KI & Snake](ki-snake/index.md): Nutze danach KI als Lernhilfe und entwickle ein einfaches grafisches Snake mit Pygame. -->
 
 Nach «VS Code Erste Schritte» kannst du mit der freiwilligen [Zusatzübung Begrüssung](aufgaben/aufgabe-01.md) die Eingaben nochmals üben oder direkt mit den Mini-Games beginnen.
 
