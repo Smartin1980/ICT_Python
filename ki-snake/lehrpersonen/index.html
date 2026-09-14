@@ -1,0 +1,1007 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tutorials, Codebeispiele und Aufgaben für den Unterricht">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Lehrpersonen: KI & Snake - Python-Unterricht</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lehrpersonen-ki-snake" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../.." title="Python-Unterricht" class="md-header__button md-logo" aria-label="Python-Unterricht" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python-Unterricht
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lehrpersonen: KI &amp; Snake
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python-Unterricht" class="md-nav__button md-logo" aria-label="Python-Unterricht" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Python-Unterricht
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startseite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python-vscode-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation Python & VS-Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vscode-erste-schritte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VS Code Erste Schritte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aufgaben/aufgabe-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Begrüssung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mini-Games
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mini-Games
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-games/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-games/01-game-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Game Intro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-games/02-variablen-datentypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Variablen & Datentypen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-games/03-operatoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Operatoren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-games/04-input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Eingaben
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-games/05-verzweigungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Verzweigungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-games/06-schleifen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Schleifen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-games/07-listen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Listen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-games/08-funktionen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Funktionen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mini-games/09-final-game/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Final Game
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rahmen-und-lernziele" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rahmen und Lernziele
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vor-der-stunde" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vor der Stunde
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ablauf-120-minuten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ablauf: 120 Minuten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fortsetzung-einfaches-snake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fortsetzung: einfaches Snake
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vorbereitete-hilfekarte-farbanderung-ohne-ki-zugang" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vorbereitete Hilfekarte: Farbänderung ohne KI-Zugang
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#losungshinweise-fur-denkfragen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lösungshinweise für Denkfragen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prufungen-und-beurteilung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prüfungen und Beurteilung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quellen-und-pflege" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quellen und Pflege
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lehrpersonen-ki-snake">Lehrpersonen: KI &amp; Snake</h1>
+<h2 id="rahmen-und-lernziele">Rahmen und Lernziele</h2>
+<p>Zielgruppe: 14–16 Jahre, Python-Grundlagen aus den Mini-Games. Umgebung: vorhandenes Python und VS Code, Pygame, freigegebener KI-Textchat im Browser. Keine Editor-Agenten oder API-Schlüssel erforderlich.</p>
+<p>Nach den <strong>ersten 120 Minuten inklusive 10 Minuten Pause</strong> können die SuS eine Grenze von KI benennen, einen konkreten Prompt formulieren, das Pygame-Fenster ausführen und eine kleine Änderung erklären und testen. Das vollständige Snake ist Material für eine <strong>anschliessende Einheit von etwa 90–120 Minuten</strong>, kein Pflichtziel der ersten zwei Stunden.</p>
+<h2 id="vor-der-stunde">Vor der Stunde</h2>
+<ul>
+<li>Installation mit dem tatsächlichen Schülergerät und Schulnetz testen: <code>.venv</code>, Paketinstallation, Interpreterwahl, Fensterstart und Tastatur.</li>
+<li>Eine auf den Schulgeräten funktionierende Python-Version festlegen. Das Material wurde mit Python 3.11 und Pygame 2.6.1 geprüft; keine automatische Kompatibilitätszusage für jede neue Python-Version.</li>
+<li>Die drei Dateien unter <code>beispiele/snake</code> und das Lernprotokoll vorab verteilen oder über die Lernseiten bereitstellen.</li>
+<li>Freigegebene KI-Zugänge, Altersbedingungen und nötige Einwilligungen vorab mit der Schule klären. Niemand muss spontan ein privates Konto eröffnen oder Zugangsdaten teilen.</li>
+<li>Für fehlenden Zugang, Nutzungslimits oder Netzprobleme die vorbereiteten Hinweise dieser Seiten und den Code lokal bereithalten. Partnerarbeit an einem erlaubten Zugang oder eine Lehrperson-Demo ermöglichen dieselbe Lernaufgabe.</li>
+<li>Snake Advanced nur kurz als späteren Kreativausblick zeigen; für die ersten Schritte die einfache Version verwenden.</li>
+</ul>
+<h2 id="ablauf-120-minuten">Ablauf: 120 Minuten</h2>
+<table>
+<thead>
+<tr>
+<th>Minuten</th>
+<th>Aktivität</th>
+<th>Material / Ergebnis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–10</td>
+<td>Einfaches Snake zeigen, Spielregeln sammeln</td>
+<td><code>03_snake.py</code>; Was muss das Programm speichern?</td>
+</tr>
+<tr>
+<td>10–25</td>
+<td>KI-Theorie und Regeln diskutieren</td>
+<td><a href="../01-ki-verstehen/">KI verstehen</a>; ein Beispiel für einen plausiblen Fehler</td>
+</tr>
+<tr>
+<td>25–40</td>
+<td>Raster und Spielschleife an der Tafel</td>
+<td><a href="../03-spielfenster/">Spielfenster</a>; Raster- in Pixelposition umrechnen</td>
+</tr>
+<tr>
+<td>40–50</td>
+<td>«Mach Snake» gemeinsam verbessern; falsche Randprüfung untersuchen</td>
+<td>Prompt mit Ziel, Kontext und gewünschter Hilfe</td>
+</tr>
+<tr>
+<td>50–60</td>
+<td>Pause</td>
+<td></td>
+</tr>
+<tr>
+<td>60–80</td>
+<td>Umgebung einrichten, Chat oder Alternative bereitstellen</td>
+<td><a href="../02-setup/">Setup</a>; Fenster startet und schliesst</td>
+</tr>
+<tr>
+<td>80–90</td>
+<td>Startcode lesen, Position oder Farbe ändern</td>
+<td><code>01_spielfenster.py</code>; Vorhersage und Beobachtung</td>
+</tr>
+<tr>
+<td>90–105</td>
+<td>Etappe 2 öffnen; Randfarbe mit KI oder Hilfekarte ergänzen</td>
+<td><a href="../04-bewegung/">Bewegung</a>; <code>02_bewegung_eigen.py</code></td>
+</tr>
+<tr>
+<td>105–115</td>
+<td>Vier Ränder testen, eine Zeile dem Partner erklären</td>
+<td>Lernprotokoll mit Erwartung und Ergebnis</td>
+</tr>
+<tr>
+<td>115–120</td>
+<td>Exit-Ticket</td>
+<td>«Mein Test», «Meine Erklärung», «Meine offene Frage»</td>
+</tr>
+</tbody>
+</table>
+<p>Bei Setup-Verzögerungen endet das Pflichtziel nach Etappe 1 mit einer Farbänderung und einem nachvollziehbaren Test. Die Randaufgabe verschiebt sich in die nächste Stunde. Schnelle Gruppen untersuchen die Körperliste, ohne den gemeinsamen Reflexionsteil auszulassen.</p>
+<h2 id="fortsetzung-einfaches-snake">Fortsetzung: einfaches Snake</h2>
+<p>Vorschlag für weitere 90 Minuten: 10 Minuten Rückblick, 20 Minuten Körperliste, 20 Minuten Futter/Wachstum, 20 Minuten Kollision/Neustart, 15 Minuten Partnerprüfung, 5 Minuten Dokumentation. Bei Bedarf zusätzliche 30 Minuten zum Lesen und Erklären des Codes einplanen. Die vollständige Lösung ist auf <a href="../05-snake/">Etappe 5</a> verfügbar. SuS müssen nicht alle Pygame-Befehle auswendig reproduzieren.</p>
+<h2 id="vorbereitete-hilfekarte-farbanderung-ohne-ki-zugang">Vorbereitete Hilfekarte: Farbänderung ohne KI-Zugang</h2>
+<p>Frage zuerst: «Wo entscheidet dein Programm bereits, ob eine Bewegung erlaubt ist?» Die Farbe muss in beiden Zweigen dieser Entscheidung gesetzt werden. Der passende Ausschnitt ist:</p>
+<pre><code class="language-python">if 0 &lt;= neu_x &lt; SPALTEN and 0 &lt;= neu_y &lt; ZEILEN:
+    x, y = neu_x, neu_y
+    farbe = (80, 220, 120)
+else:
+    farbe = (240, 70, 70)
+</code></pre>
+<p>Danach im vorhandenen <code>pygame.draw.rect</code> den bisherigen Farbwert durch <code>farbe</code> ersetzen. Das ist ein Ausschnitt für Etappe 2, kein eigenständig startbares Programm. Test: alle vier Ränder, vom Rand weglenken und Esc. Erwartet: rot bei blockiertem Schritt, grün bei erlaubtem Schritt.</p>
+<h2 id="losungshinweise-fur-denkfragen">Lösungshinweise für Denkfragen</h2>
+<ul>
+<li>Fenster: 24 × 25 = 600 Pixel breit. <code>(10, 4)</code> entspricht <code>(250, 100)</code> Pixeln. Ereignisse sind auch zum Schliessen nötig.</li>
+<li>Bewegung: Nach drei Schritten von <code>(5, 8)</code> nach rechts steht der Kopf bei <code>(8, 8)</code>. Gültige Spalten sind 0–23. Die Richtung bleibt zwischen Tastendrücken gespeichert.</li>
+<li>Körper: Vorne einen Kopf anfügen, hinten ein Feld entfernen; beim Fressen das Entfernen auslassen.</li>
+<li>Selbstkollision: Die im selben Schritt verschwindende Schwanzspitze darf betreten werden. Das übrige Körperstück ist ein Hindernis.</li>
+<li>Steuerung: Rechts → oben → links vor dem nächsten Schritt wäre trotz einzelner erlaubter Drehungen eine indirekte Umkehr. Nur eine Drehung pro Schritt zulassen.</li>
+<li>Volles Feld: Kein freies Futterfeld bedeutet Sieg statt einer endlosen Zufallssuche.</li>
+</ul>
+<h2 id="prufungen-und-beurteilung">Prüfungen und Beurteilung</h2>
+<p>Die Prüfsuite <code>tests/test_snake.py</code> kontrolliert Spielregeln und startet alle drei Programme mit einem unsichtbaren SDL-Testfenster. Aus dem <strong>Repository-Hauptordner</strong>, mit einem Python mit installiertem Pygame:</p>
+<pre><code class="language-text">python -m unittest discover -s tests -p test_snake.py
+</code></pre>
+<p>Zusätzlich vor Ort prüfen: sichtbare Darstellung, Fensterfokus, vier Richtungen, Game Over, R und Esc. Automatische Tests ersetzen den Test auf Schulgeräten nicht.</p>
+<table>
+<thead>
+<tr>
+<th>Kriterium</th>
+<th>Erfüllt, wenn …</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auftrag</td>
+<td>Eine kleine Änderung und klare Grenzen formuliert sind</td>
+</tr>
+<tr>
+<td>Verständnis</td>
+<td>Mindestens eine relevante Zeile korrekt erklärt wird</td>
+</tr>
+<tr>
+<td>Prüfung</td>
+<td>Normalfall, Grenzfall und bisherige Funktion dokumentiert sind</td>
+</tr>
+<tr>
+<td>Transparenz</td>
+<td>Übernommene und verworfene KI-Hilfe benannt wird</td>
+</tr>
+</tbody>
+</table>
+<p>Bewerte das Vorgehen und Verständnis, nicht die Länge der KI-Antwort oder die Menge neuer Features. Ein nicht gelöster Fehler mit sauberem Testprotokoll ist ein sinnvoller Lernstand.</p>
+<h2 id="quellen-und-pflege">Quellen und Pflege</h2>
+<p>Offizielle technische Quellen: <a href="https://www.pygame.org/docs/">Pygame</a>, <a href="https://www.pygame.org/docs/ref/event.html">Ereignisse</a>, <a href="https://www.pygame.org/docs/ref/time.html">Zeitsteuerung</a>. Für didaktische Anregungen: <a href="https://learn.chatgpt.com/use-cases/collections/education">OpenAI: Bildung</a>. Anbieterbedingungen und schulische Vorgaben vor jedem Durchlauf erneut prüfen; dieses Material setzt keinen bestimmten Modellnamen oder ein festes Nachrichtenkontingent voraus.</p>
+<p>Nach Änderungen an den Python-Dateien synchronisiert <code>python scripts/sync_snake_docs.py</code> die vollständigen Codeblöcke und das Downloadpaket. <code>python scripts/sync_snake_docs.py --check</code> prüft, ob sie aktuell sind.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1370 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Schritt-für-Schritt-Anleitung für den Python-Kurs">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../vscode-erste-schritte/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Python und Visual Studio Code installieren - Python-Unterricht</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python-und-visual-studio-code-installieren" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href=".." title="Python-Unterricht" class="md-header__button md-logo" aria-label="Python-Unterricht" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python-Unterricht
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python und Visual Studio Code installieren
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Python-Unterricht" class="md-nav__button md-logo" aria-label="Python-Unterricht" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Python-Unterricht
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startseite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation Python & VS-Code
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation Python & VS-Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#das-installieren-wir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Das installieren wir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teil-1-python-installieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teil 1: Python installieren
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Teil 1: Python installieren">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-kontrollieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation kontrollieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teil-2-visual-studio-code-installieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teil 2: Visual Studio Code installieren
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teil-3-python-erweiterung-installieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teil 3: Python-Erweiterung installieren
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teil-4-einen-kursordner-anlegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teil 4: Einen Kursordner anlegen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-fur-spater-pygame-zero-installieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional für später: Pygame Zero installieren
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haufige-probleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Häufige Probleme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Häufige Probleme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-wurde-nicht-gefunden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        python wurde nicht gefunden
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip-wurde-nicht-gefunden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pip wurde nicht gefunden
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abschlusskontrolle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abschlusskontrolle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hinweise-fur-die-lehrperson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hinweise für die Lehrperson
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quellen-und-weiterfuhrende-anleitungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quellen und weiterführende Anleitungen
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vscode-erste-schritte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VS Code Erste Schritte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aufgaben/aufgabe-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Begrüssung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mini-Games
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mini-Games
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/01-game-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Game Intro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/02-variablen-datentypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Variablen & Datentypen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/03-operatoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Operatoren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/04-input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Eingaben
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/05-verzweigungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Verzweigungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/06-schleifen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Schleifen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/07-listen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Listen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/08-funktionen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Funktionen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/09-final-game/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Final Game
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#das-installieren-wir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Das installieren wir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teil-1-python-installieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teil 1: Python installieren
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Teil 1: Python installieren">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-kontrollieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation kontrollieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teil-2-visual-studio-code-installieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teil 2: Visual Studio Code installieren
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teil-3-python-erweiterung-installieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teil 3: Python-Erweiterung installieren
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teil-4-einen-kursordner-anlegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teil 4: Einen Kursordner anlegen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-fur-spater-pygame-zero-installieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional für später: Pygame Zero installieren
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haufige-probleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Häufige Probleme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Häufige Probleme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-wurde-nicht-gefunden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        python wurde nicht gefunden
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip-wurde-nicht-gefunden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pip wurde nicht gefunden
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abschlusskontrolle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abschlusskontrolle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hinweise-fur-die-lehrperson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hinweise für die Lehrperson
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quellen-und-weiterfuhrende-anleitungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quellen und weiterführende Anleitungen
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="python-und-visual-studio-code-installieren">Python und Visual Studio Code installieren</h1>
+<p>In dieser Anleitung richtest du deinen Computer für den Python-Kurs ein. Am Ende sind Python, VS Code und die Python-Erweiterung installiert. In der nächsten Anleitung lernst du die Oberfläche kennen und schreibst danach deine ersten Programme.</p>
+<blockquote>
+<p><strong>Zeitbedarf:</strong> ungefähr 20–30 Minuten<br />
+<strong>Du benötigst:</strong> einen Computer mit Windows oder macOS und eine Internetverbindung</p>
+</blockquote>
+<h2 id="das-installieren-wir">Das installieren wir</h2>
+<p>Für den Kurs benötigen wir drei Bestandteile:</p>
+<ol>
+<li><strong>Python</strong> führt unsere Programme aus.</li>
+<li><strong>Visual Studio Code</strong>, kurz <strong>VS Code</strong>, ist unser Programmiereditor.</li>
+<li>Die <strong>Python-Erweiterung für VS Code</strong> verbindet den Editor mit Python.</li>
+</ol>
+<p>Für die neun <a href="../mini-games/">Mini-Games</a> brauchst du keine zusätzlichen Python-Pakete. <strong>Pygame Zero</strong> kommt erst später beim grafischen Spiel <strong>Achtung, Hai!</strong> zum Einsatz.</p>
+<p>Für den anschliessenden Unterrichtsbereich <strong>KI &amp; Snake</strong> verwenden wir <strong>Pygame</strong>. Die passende Einrichtung folgt dort auf der Seite <a href="../ki-snake/02-setup/">Umgebung einrichten</a>.</p>
+<hr />
+<h2 id="teil-1-python-installieren">Teil 1: Python installieren</h2>
+<p><img alt="Download Python" src="../assets/images/Download_Python.avif" /></p>
+<h3 id="windows">Windows</h3>
+<ol>
+<li>Öffne die offizielle Seite <a href="https://www.python.org/downloads/">python.org/downloads</a>.</li>
+<li>Lade die aktuelle stabile Version von <strong>Python 3</strong> für Windows herunter.</li>
+<li>Öffne die heruntergeladene Installationsdatei.</li>
+<li>Starte die empfohlene Standardinstallation.</li>
+<li>Warte, bis die Installation abgeschlossen ist.</li>
+</ol>
+<blockquote>
+<p><strong>Wichtig:</strong> Falls der Installer die Option <strong>Add Python to PATH</strong> anzeigt, aktiviere sie. Dadurch kann Windows Python später im Terminal finden.</p>
+</blockquote>
+<h3 id="macos">macOS</h3>
+<ol>
+<li>Öffne <a href="https://www.python.org/downloads/">python.org/downloads</a>.</li>
+<li>Lade die aktuelle stabile Version von <strong>Python 3</strong> für macOS herunter.</li>
+<li>Öffne die heruntergeladene <code>.pkg</code>-Datei.</li>
+<li>Folge dem Installationsassistenten und verwende die vorgeschlagenen Einstellungen.</li>
+</ol>
+<h3 id="installation-kontrollieren">Installation kontrollieren</h3>
+<p>Öffne unter Windows <strong>PowerShell</strong> beziehungsweise unter macOS das <strong>Terminal</strong>.</p>
+<p>Gib unter Windows ein:</p>
+<pre><code class="language-powershell">python --version
+</code></pre>
+<p>Falls dieser Befehl nicht funktioniert, versuche:</p>
+<pre><code class="language-powershell">py --version
+</code></pre>
+<p>Gib unter macOS ein:</p>
+<pre><code class="language-bash">python3 --version
+</code></pre>
+<p>Du solltest eine Ausgabe ähnlich wie diese erhalten:</p>
+<pre><code class="language-text">Python 3.x.x
+</code></pre>
+<p>Die genauen Zahlen dürfen anders aussehen. Entscheidend ist, dass die Version mit <code>3</code> beginnt.</p>
+<hr />
+<h2 id="teil-2-visual-studio-code-installieren">Teil 2: Visual Studio Code installieren</h2>
+<p><img alt="Download VS Code" src="../assets/images/Download_VS_Code.png" /></p>
+<ol>
+<li>Öffne <a href="https://code.visualstudio.com/">code.visualstudio.com</a>.</li>
+<li>Lade die passende Version für dein Betriebssystem herunter.</li>
+<li>Öffne die Installationsdatei.</li>
+<li>Übernimm die vorgeschlagenen Einstellungen.</li>
+<li>Starte <strong>Visual Studio Code</strong>.</li>
+</ol>
+<p>Unter Windows sind folgende zusätzliche Optionen praktisch, falls sie angezeigt werden:</p>
+<ul>
+<li><strong>Add to PATH</strong></li>
+<li><strong>Open with Code</strong> zum Kontextmenü hinzufügen</li>
+<li>VS Code als Editor für unterstützte Dateitypen registrieren</li>
+</ul>
+<hr />
+<h2 id="teil-3-python-erweiterung-installieren">Teil 3: Python-Erweiterung installieren</h2>
+<ol>
+<li>Öffne VS Code.</li>
+<li>Klicke links auf das Symbol <strong>Extensions</strong> mit den vier Kästchen.</li>
+<li>Alternativ kannst du die Tastenkombination <code>Ctrl</code> + <code>Shift</code> + <code>X</code> verwenden. Auf dem Mac ist es <code>Cmd</code> + <code>Shift</code> + <code>X</code>.</li>
+<li>Suche nach <code>Python</code>.</li>
+<li>Installiere die Erweiterung <strong>Python</strong> des Herausgebers <strong>Microsoft</strong>.</li>
+</ol>
+<p>Die Erweiterung ergänzt unter anderem:</p>
+<ul>
+<li>farbige Darstellung von Python-Code,</li>
+<li>automatische Codevorschläge,</li>
+<li>Fehlermeldungen und Hinweise,</li>
+<li>Ausführen von Python-Dateien,</li>
+<li>Debugging zum schrittweisen Untersuchen eines Programms.</li>
+</ul>
+<blockquote>
+<p>Installiere nicht wahllos mehrere Python-Erweiterungen. Für den Kurs genügt zunächst die offizielle Erweiterung von Microsoft.</p>
+</blockquote>
+<hr />
+<h2 id="teil-4-einen-kursordner-anlegen">Teil 4: Einen Kursordner anlegen</h2>
+<p>Speichere deine Programme nicht irgendwo zwischen Downloads und Dokumenten. Erstelle einen eigenen Kursordner.</p>
+<ol>
+<li>Erstelle in deinen Dokumenten einen Ordner namens <code>python-kurs</code>.</li>
+<li>Wähle in VS Code <strong>File → Open Folder</strong> beziehungsweise <strong>Datei → Ordner öffnen</strong>.</li>
+<li>Öffne den Ordner <code>python-kurs</code>.</li>
+<li>Bestätige bei einer Sicherheitsabfrage, dass du diesem selbst erstellten Ordner vertraust.</li>
+</ol>
+<p>Im Explorer auf der linken Seite sollte nun der Ordner <code>python-kurs</code> erscheinen. Hier speicherst du deine eigenen Lösungen. Lege darin später den Unterordner <code>mini-games</code> für die neun Spiele an. Die Vorlagen im Kursprojekt liegen unter <code>beispiele/mini-games</code>; du findest ihren vollständigen Code auch auf den Lernseiten.</p>
+<hr />
+<h2 id="optional-fur-spater-pygame-zero-installieren">Optional für später: Pygame Zero installieren</h2>
+<p>Pygame Zero benötigen wir erst für das grafische Spiel <strong>Achtung, Hai!</strong> im Projektordner <code>beispiele/Achtung_Hai</code>. Die Installation kann gemeinsam im Unterricht erfolgen. Für die Mini-Games kannst du diesen Abschnitt überspringen.</p>
+<ol>
+<li>Öffne in VS Code über <strong>Terminal → New Terminal</strong> ein neues Terminal.</li>
+<li>Gib unter Windows ein:</li>
+</ol>
+<pre><code class="language-powershell">python -m pip install pgzero
+</code></pre>
+<p>Wenn du Python über den Befehl <code>py</code> gestartet hast, verwende stattdessen:</p>
+<pre><code class="language-powershell">py -m pip install pgzero
+</code></pre>
+<p>Unter macOS verwendest du:</p>
+<pre><code class="language-bash">python3 -m pip install pgzero
+</code></pre>
+<ol>
+<li>Kontrolliere die Installation:</li>
+</ol>
+<pre><code class="language-powershell">python -m pip show pgzero
+</code></pre>
+<p>Unter macOS lautet der Befehl entsprechend:</p>
+<pre><code class="language-bash">python3 -m pip show pgzero
+</code></pre>
+<p>Falls du unter Windows <code>py</code> verwendest, prüfe mit <code>py -m pip show pgzero</code>. Die Ausgabe sollte unter anderem <code>Name: pgzero</code> und eine Versionsnummer enthalten. Verwende zum Installieren und Prüfen dieselbe Python-Installation wie in VS Code.</p>
+<blockquote>
+<p>Pygame Zero wird offiziell als Paket <code>pgzero</code> installiert. Dabei wird auch das benötigte Pygame mitinstalliert.</p>
+</blockquote>
+<hr />
+<h2 id="haufige-probleme">Häufige Probleme</h2>
+<h3 id="python-wurde-nicht-gefunden"><code>python</code> wurde nicht gefunden</h3>
+<ul>
+<li>Schliesse VS Code vollständig und öffne es erneut.</li>
+<li>Probiere unter Windows <code>py --version</code>.</li>
+<li>Kontrolliere, ob Python wirklich installiert wurde.</li>
+<li>Installiere Python nochmals und aktiviere <strong>Add Python to PATH</strong>, falls diese Option angeboten wird.</li>
+</ul>
+<h3 id="pip-wurde-nicht-gefunden"><code>pip</code> wurde nicht gefunden</h3>
+<p>Verwende nicht nur <code>pip</code>, sondern rufe es über Python auf:</p>
+<pre><code class="language-powershell">python -m pip install pgzero
+</code></pre>
+<p>Unter Windows kann auch Folgendes funktionieren:</p>
+<pre><code class="language-powershell">py -m pip install pgzero
+</code></pre>
+<hr />
+<h2 id="abschlusskontrolle">Abschlusskontrolle</h2>
+<p>Setze einen Haken, wenn der Schritt funktioniert. Die Häkchen werden nach dem Neuladen der Seite nicht gespeichert:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Python 3 ist installiert.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <code>python --version</code>, <code>py --version</code> oder <code>python3 --version</code> zeigt eine Version an.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> VS Code ist installiert.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Die Erweiterung <strong>Python von Microsoft</strong> ist installiert.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Der Ordner <code>python-kurs</code> ist in VS Code geöffnet.</li>
+</ul>
+<p>Optional für später: Pygame Zero kannst du gemeinsam mit der Lehrperson vor <strong>Achtung, Hai!</strong> installieren.</p>
+<p>Wenn alle Pflichtpunkte erfüllt sind, geht es weiter mit <a href="../vscode-erste-schritte/">VS Code Erste Schritte</a>. Dort lernst du zuerst Explorer, Editor und Terminal kennen und schreibst anschliessend deine ersten Programme.</p>
+<hr />
+<h2 id="hinweise-fur-die-lehrperson">Hinweise für die Lehrperson</h2>
+<ul>
+<li>Python und VS Code nach Möglichkeit vor dem ersten Kurstag installieren lassen.</li>
+<li>Für die Installationskontrolle fünf Minuten zu Beginn einplanen.</li>
+<li>Auf Schulgeräten vorab prüfen, ob Installationen und <code>pip</code> durch Richtlinien blockiert werden.</li>
+<li>Für alle Lernenden dieselbe Ordnerstruktur verwenden.</li>
+<li>Pygame Zero erst installieren, wenn es im Kurs benötigt wird.</li>
+<li>Bei Installationsproblemen zuerst den Versionsbefehl und die installierte Python-Erweiterung kontrollieren.</li>
+<li>Die ersten Programme folgen in «VS Code Erste Schritte», nachdem die Oberfläche erklärt wurde.</li>
+</ul>
+<h2 id="quellen-und-weiterfuhrende-anleitungen">Quellen und weiterführende Anleitungen</h2>
+<ul>
+<li><a href="https://www.python.org/downloads/">Offizielles Python-Downloadportal</a></li>
+<li><a href="https://code.visualstudio.com/docs/python/python-tutorial">Offizieller Python-Einstieg in VS Code</a></li>
+<li><a href="https://docs.python.org/3/using/windows.html">Offizielle Python-Dokumentation für Windows</a></li>
+<li><a href="https://docs.python.org/3/using/mac.html">Offizielle Python-Dokumentation für macOS</a></li>
+<li><a href="https://pygame-zero.readthedocs.io/en/latest/installation.html">Offizielle Installationsanleitung für Pygame Zero</a></li>
+<li><a href="https://www.datacamp.com/tutorial/setting-up-vscode-python">DataCamp: Setting Up VS Code for Python</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
