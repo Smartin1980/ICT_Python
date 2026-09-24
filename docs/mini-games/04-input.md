@@ -40,6 +40,21 @@ Das Grundspiel prüft weder die Dreistelligkeit noch ungültige Zahleneingaben.
 
 Zeige das Alter in einem Jahr an. Überlege danach, wie du den Code speichern müsstest, damit führende Nullen erhalten bleiben.
 
+## 🤖 Frag deinen KI-Tutor
+
+```text
+Du bist mein Python-Tutor.
+Erkläre mir anhand meines Codes, wie `input()` und `int()` zusammenarbeiten.
+Hilf mir herauszufinden, warum `input()` immer Text liefert.
+Erkläre mir, warum beim Alter `int()` verwendet wird.
+Was passiert bei `int("007")`? Was könnte bei `int("zwölf")` passieren?
+Gib mir keinen fertigen Code, sondern nur Hinweise und kleine Erklärungen.
+Stelle mir danach zwei kurze Verständnisfragen.
+
+Mein Code:
+[MEIN CODE]
+```
+
 ## Vollständiger Lösungscode
 
 Vergleiche erst nach deinem eigenen Versuch. Dieser Code enthält das vollständige Grundspiel; die freiwilligen Zusatzaufgaben sind nicht eingebaut.

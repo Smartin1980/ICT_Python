@@ -41,6 +41,22 @@ Gib `banane` ein: Dieser Tipp ist sicher falsch. Ersetze die Liste danach vorüb
 
 Ergänze drei Wörter. Zeige vor der Eingabe die möglichen Wörter an, damit andere wissen, welche zur Auswahl stehen.
 
+## 🤖 Frag deinen KI-Tutor
+
+```text
+Du bist mein Python-Tutor.
+Erkläre mir anhand meines Codes, wie Listen funktionieren.
+Warum beginnt der erste Index bei 0?
+Was bedeutet `woerter[0]`?
+Was macht `random.choice(woerter)`?
+Warum wird `tipp.lower()` verwendet?
+Stelle mir danach zwei kurze Verständnisfragen.
+Schreibe keine neue Lösung.
+
+Mein Code:
+[MEIN CODE]
+```
+
 ## Vollständiger Lösungscode
 
 Vergleiche erst nach deinem eigenen Versuch. Dieser Code enthält das vollständige Grundspiel; die freiwilligen Zusatzaufgaben sind nicht eingebaut.

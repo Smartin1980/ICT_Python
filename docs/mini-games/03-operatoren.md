@@ -4,15 +4,15 @@
 
 Du berechnest deinen Goldbestand nach einem Fund und einem Einkauf.
 
-| Operator | Bedeutung | Beispiel |
-| --- | --- | --- |
-| `+` | Addition | `8 + 3` ergibt `11` |
-| `-` | Subtraktion | `8 - 3` ergibt `5` |
-| `*` | Multiplikation | `8 * 3` ergibt `24` |
-| `/` | Division | `8 / 2` ergibt `4.0` |
-| `//` | Division mit Abrunden | `8 // 3` ergibt `2` |
-| `%` | Divisionsrest | `8 % 3` ergibt `2` |
-| `**` | Potenz | `2 ** 3` ergibt `8` |
+| Operator | Bedeutung             | Beispiel             |
+| -------- | --------------------- | -------------------- |
+| `+`      | Addition              | `8 + 3` ergibt `11`  |
+| `-`      | Subtraktion           | `8 - 3` ergibt `5`   |
+| `*`      | Multiplikation        | `8 * 3` ergibt `24`  |
+| `/`      | Division              | `8 / 2` ergibt `4.0` |
+| `//`     | Division mit Abrunden | `8 // 3` ergibt `2`  |
+| `%`      | Divisionsrest         | `8 % 3` ergibt `2`   |
+| `**`     | Potenz                | `2 ** 3` ergibt `8`  |
 
 ```python
 gold = 20
@@ -48,6 +48,20 @@ Die Goldstände müssen 20, 30 und 15 sein. Prüfe die Zahlen 17 und 18: Erwarte
 ## Zusatzaufgabe
 
 Kaufe zusätzlich zwei Heiltränke zu je 3 Gold. Berechne ihren Gesamtpreis mit `*`. Mit Kapitel 5 kannst du später Käufe bei zu wenig Gold verhindern.
+
+## 🤖 Frag deinen KI-Tutor
+
+```text
+Du bist mein Python-Tutor.
+Erkläre mir anhand meines Codes, wie die Operatoren funktionieren.
+Zeige mir, wie ich die Werte in meinen Variablen verändere und warum die Berechnungen so funktionieren.
+Erkläre mir besonders, warum `print(gold - 15)` den gespeicherten Wert von `gold` nicht verändert.
+Gib mir einen kleinen Hinweis, wenn ich selbst noch überlegen möchte.
+Stelle mir danach zwei Verständnisfragen.
+
+Mein Code:
+[MEIN CODE]
+```
 
 ## Vollständiger Lösungscode
 

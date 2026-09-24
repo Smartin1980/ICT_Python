@@ -4,12 +4,12 @@
 
 Du speicherst Eigenschaften einer Spielfigur. Mit `=` weist du einer Variable einen Wert zu.
 
-| Typ | Bedeutung | Beispiel |
-| --- | --- | --- |
-| `str` | Text | `"Alex"` |
-| `int` | Ganze Zahl | `100` |
-| `float` | Kommazahl, in Python mit Punkt | `4.5` |
-| `bool` | Wahr oder falsch | `True` oder `False` |
+| Typ     | Bedeutung                      | Beispiel            |
+| ------- | ------------------------------ | ------------------- |
+| `str`   | Text                           | `"Alex"`            |
+| `int`   | Ganze Zahl                     | `100`               |
+| `float` | Kommazahl, in Python mit Punkt | `4.5`               |
+| `bool`  | Wahr oder falsch               | `True` oder `False` |
 
 ```python
 punkte = 50
@@ -43,6 +43,20 @@ Zuerst müssen 100 und nach dem Schaden 80 Leben erscheinen. Ändere die Startle
 ## Zusatzaufgabe
 
 Ergänze mindestens eine fünfte Eigenschaft, etwa Stärke oder Beruf, und gib sie aus.
+
+## 🤖 Frag deinen KI-Tutor
+
+```text
+Du bist mein Python-Tutor.
+Erkläre mir anhand meines Codes, was die Variablen bedeuten.
+Identifiziere die Variablen in meinem Code und frage nach ihren Datentypen.
+Erkläre besonders, was bei `leben = leben - 20` passiert.
+Schreibe keine neue Lösung.
+Stelle mir danach zwei kurze Verständnisfragen.
+
+Mein Code:
+[MEIN CODE]
+```
 
 ## Vollständiger Lösungscode
 

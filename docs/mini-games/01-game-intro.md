@@ -28,6 +28,18 @@ Starte die Datei. Erscheinen Rahmen, Titel, Leerzeile und Begrüssung in dieser 
 
 Gestalte einen eigenen Spieltitel und ein kleines Bild aus Textzeichen.
 
+## 🤖 Frag deinen KI-Tutor
+
+```text
+Du bist mein Python-Tutor.
+Erkläre mir anhand meines Codes, was jeder print()-Befehl macht und in welcher Reihenfolge Python die Befehle ausführt.
+Schreibe keine neue Lösung.
+Stelle mir danach zwei kurze Verständnisfragen.
+
+Mein Code:
+[MEIN CODE]
+```
+
 ## Vollständiger Lösungscode
 
 Vergleiche erst nach deinem eigenen Versuch. Dieser Code enthält das vollständige Grundspiel; die freiwilligen Zusatzaufgaben sind nicht eingebaut.

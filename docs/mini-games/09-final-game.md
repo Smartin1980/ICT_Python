@@ -40,12 +40,12 @@ Im Grundspiel bedeutet `"2"` Weglaufen beziehungsweise Fliehen. Jede andere Eing
 
 ## Teste dich
 
-| Weg | Eingaben | Erwartung |
-| --- | --- | --- |
-| Nach Hause | Name, dann `2` | Ende ohne Kampf |
-| Flucht | Name, dann `1`, dann `2` | Flucht ohne Angriff oder Belohnung |
-| Sieg | Name, dann immer `1` | Sieg und 30 Gold; kein Gegenangriff nach dem Sieg |
-| Niederlage | Vorübergehend `leben = 1`, dann angreifen | Niederlage nach dem ersten Gegenangriff |
+| Weg        | Eingaben                                  | Erwartung                                         |
+| ---------- | ----------------------------------------- | ------------------------------------------------- |
+| Nach Hause | Name, dann `2`                            | Ende ohne Kampf                                   |
+| Flucht     | Name, dann `1`, dann `2`                  | Flucht ohne Angriff oder Belohnung                |
+| Sieg       | Name, dann immer `1`                      | Sieg und 30 Gold; kein Gegenangriff nach dem Sieg |
+| Niederlage | Vorübergehend `leben = 1`, dann angreifen | Niederlage nach dem ersten Gegenangriff           |
 
 Stelle nach dem Niederlagentest die Startleben wieder auf 100. Mit den normalen Werten gewinnst du beim fortgesetzten Angreifen in höchstens vier Angriffen; die höchstens drei Gegenangriffe reichen nicht für eine Niederlage. Die Schadenszahlen können bei jedem Start anders sein.
 
@@ -59,6 +59,38 @@ Baue jeweils eine Erweiterung ein und teste sie:
 - Ergänze einen Heiltrank oder einen weiteren Raum.
 
 Erkläre jemandem anhand deines Codes eine Kampfrunde: Woher kommt der Schaden, welcher Wert verändert sich und warum endet der Kampf?
+
+## 🤖 KI-Code-Review
+
+```text
+Du bist mein Python-Tutor.
+
+Ich habe mein Python Quest fertig programmiert.
+
+Programmiere das Spiel nicht neu und gib mir keine verbesserte Komplettlösung.
+
+Hilf mir stattdessen zu überprüfen, ob ich meinen eigenen Code verstanden habe.
+
+Gehe mit mir nacheinander folgende Punkte durch:
+
+1. Lass mich den Ablauf meines Spiels erklären.
+2. Frage mich nach mindestens zwei Variablen und deren Aufgabe.
+3. Suche mit mir eine if/elif/else-Verzweigung und lass mich erklären, warum sie benötigt wird.
+4. Suche mit mir eine Schleife und lass mich erklären, wann sie endet.
+5. Frage mich, wofür random verwendet wird.
+6. Weise mich auf mögliche Fehler oder problematische Stellen hin, ohne sie sofort selbst zu korrigieren.
+7. Stelle mir am Ende drei Verständnisfragen zu meinem eigenen Programm.
+
+Stelle immer nur eine Frage auf einmal und warte auf meine Antwort.
+
+Am Schluss frage mich:
+
+"Kannst du dein Spiel jetzt jemandem erklären, ohne den Code vorzulesen?"
+
+Mein Code:
+
+[MEIN CODE]
+```
 
 ## Vollständiger Lösungscode
 

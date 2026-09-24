@@ -4,14 +4,14 @@
 
 Dein Ratespiel reagiert auf einen Tipp. `if` prüft eine Bedingung. Ist sie falsch, prüft Python `elif` («sonst wenn»). Trifft keine zu, läuft `else`. Nur einer dieser Zweige wird ausgeführt.
 
-| Vergleich | Bedeutung |
-| --- | --- |
-| `==` | gleich |
-| `!=` | ungleich |
-| `<` | kleiner |
-| `>` | grösser |
-| `<=` | kleiner oder gleich |
-| `>=` | grösser oder gleich |
+| Vergleich | Bedeutung           |
+| --------- | ------------------- |
+| `==`      | gleich              |
+| `!=`      | ungleich            |
+| `<`       | kleiner             |
+| `>`       | grösser             |
+| `<=`      | kleiner oder gleich |
+| `>=`      | grösser oder gleich |
 
 Achtung: `=` speichert einen Wert, `==` vergleicht zwei Werte. Nach einer Bedingung steht ein Doppelpunkt. Der zugehörige Code wird mit vier Leerzeichen eingerückt.
 
@@ -36,17 +36,35 @@ Beginne mit `if tipp == geheimzahl:`. Der zweite Zweig braucht `elif` und `<`. H
 
 Starte für jeden Test neu; das Grundspiel bietet einen Versuch pro Start.
 
-| Tipp | Erwartete Ausgabe |
-| --- | --- |
-| `7` | `Richtig!` |
-| `3` | `Meine Zahl ist grösser.` |
-| `9` | `Meine Zahl ist kleiner.` |
+| Tipp | Erwartete Ausgabe         |
+| ---- | ------------------------- |
+| `7`  | `Richtig!`                |
+| `3`  | `Meine Zahl ist grösser.` |
+| `9`  | `Meine Zahl ist kleiner.` |
 
 Verwende ganze Zahlen. Der Bereich 1 bis 10 wird noch nicht geprüft; Texteingaben werden nicht abgefangen.
 
 ## Zusatzaufgabe
 
 Ändere die Geheimzahl und teste alle drei Fälle erneut. Ergänze eine eigene Meldung für Zahlen ausserhalb von 1 bis 10.
+
+## 🤖 Frag deinen KI-Tutor
+
+```text
+Du bist mein Python-Tutor.
+Erkläre mir anhand meines Codes, wie `if`, `elif` und `else` den Programmfluss steuern.
+Lass uns gemeinsam verschiedene Werte durch das Programm gehen.
+Beispiel: Geheimzahl = 7.
+Was passiert bei:
+- Tipp 3
+- Tipp 7
+- Tipp 9
+Stelle mir danach zwei kurze Verständnisfragen.
+Schreibe keine neue Lösung.
+
+Mein Code:
+[MEIN CODE]
+```
 
 ## Vollständiger Lösungscode
 

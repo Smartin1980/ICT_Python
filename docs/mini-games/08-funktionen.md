@@ -41,6 +41,20 @@ Erwartet werden 30 HP, 10 Schaden und danach 20 HP. Ändere den Aufruf zu `angre
 
 Schreibe `heilen(leben)`, das `leben + 10` zurückgibt. Speichere das Ergebnis des Aufrufs in `spieler_leben` und gib es aus. Wie könntest du die Heilung auf höchstens 100 Leben begrenzen?
 
+## 🤖 Frag deinen KI-Tutor
+
+```text
+Du bist mein Python-Tutor.
+Erkläre mir anhand meines Codes den Unterschied zwischen einer Funktion definieren, einer Funktion aufrufen, einem Parameter übergeben und einem Wert mit `return` zurückgeben.
+Nutze dabei mein Beispiel `angreifen(schaden)`.
+Hilf mir herauszufinden, wann ich eine Funktion verwende und was der Aufruf genau macht.
+Stelle mir danach zwei kurze Verständnisfragen.
+Schreibe keine neue Monsterkampf-Lösung.
+
+Mein Code:
+[MEIN CODE]
+```
+
 ## Vollständiger Lösungscode
 
 Vergleiche erst nach deinem eigenen Versuch. Dieser Code enthält das vollständige Grundspiel; die freiwilligen Zusatzaufgaben sind nicht eingebaut.

@@ -52,6 +52,22 @@ In allen Fällen erscheint `Spiel beendet.` genau einmal. Gib nur ganze Zahlen e
 
 Erhöhe auf fünf Versuche und passe auch den Anzeigetext an. Kannst du die Gesamtzahl in einer Variable speichern und an beiden Stellen verwenden?
 
+## 🤖 Frag deinen KI-Tutor
+
+```text
+Du bist mein Python-Tutor.
+Erkläre mir anhand meines Codes, wie die Schleife funktioniert.
+Warum erzeugt `range(3)` die Werte 0, 1 und 2?
+Warum wird `versuch + 1` ausgegeben?
+Was macht `break`?
+Was würde passieren, wenn `break` entfernt wird?
+Stelle mir danach eine kleine Vorhersagefrage.
+Schreibe keine neue Lösung.
+
+Mein Code:
+[MEIN CODE]
+```
+
 ## Vollständiger Lösungscode
 
 Vergleiche erst nach deinem eigenen Versuch. Dieser Code enthält das vollständige Grundspiel; die freiwilligen Zusatzaufgaben sind nicht eingebaut.
