@@ -27,6 +27,15 @@ nav:
       - 7. Listen: mini-games/07-listen.md
       - 8. Funktionen: mini-games/08-funktionen.md
       - 9. Final Game: mini-games/09-final-game.md
+  - 🐍 Snake mit KI:
+      - Start: snake/index.md
+      - 1 – Spielfeld & Snake: snake/01-start.md
+      - 2 – Bewegung: snake/02-bewegung.md
+      - 3 – Futter: snake/03-futter.md
+      - 4 – Wachsen: snake/04-wachsen.md
+      - 5 – Game Over: snake/05-game-over.md
+      - 6 – Punkte & Neustart: snake/06-punkte-neustart.md
+      - 7 – Mein Snake: snake/07-mein-snake.md
       #- KI & Snake:
       #- Übersicht: ki-snake/index.md
       #- 1. KI verstehen: ki-snake/01-ki-verstehen.md
