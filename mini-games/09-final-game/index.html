@@ -1,0 +1,1478 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tutorials, Codebeispiele und Aufgaben für den Unterricht">
+      
+      
+      
+      
+        <link rel="prev" href="../08-funktionen/">
+      
+      
+        <link rel="next" href="../../snake/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>9. Final Game - Python-Unterricht</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#9-python-quest-final-game" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../.." title="Python-Unterricht" class="md-header__button md-logo" aria-label="Python-Unterricht" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python-Unterricht
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              9. Final Game
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python-Unterricht" class="md-nav__button md-logo" aria-label="Python-Unterricht" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Python-Unterricht
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startseite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python-vscode-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation Python & VS-Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vscode-erste-schritte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VS Code Erste Schritte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aufgaben/aufgabe-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Begrüssung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mini-Games
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mini-Games
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-game-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Game Intro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-variablen-datentypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Variablen & Datentypen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-operatoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Operatoren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Eingaben
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-verzweigungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Verzweigungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-schleifen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Schleifen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-listen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Listen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-funktionen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Funktionen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Final Game
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Final Game
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ziel-und-spielidee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ziel und Spielidee
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neue-werkzeuge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Neue Werkzeuge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erst-uberlegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erst überlegen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bauauftrag-in-etappen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bauauftrag in Etappen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teste-dich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste dich
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zusatzaufgaben" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zusatzaufgaben
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ki-code-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 KI-Code-Review
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vollstandiger-losungscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vollständiger Lösungscode
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🐍 Snake mit KI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🐍 Snake mit KI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../snake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../snake/01-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 – Spielfeld & Snake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../snake/02-bewegung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2 – Bewegung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../snake/03-futter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 – Futter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../snake/04-wachsen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 – Wachsen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../snake/05-game-over/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 – Game Over
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../snake/06-punkte-neustart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 – Punkte & Neustart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../snake/07-mein-snake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 – Mein Snake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ziel-und-spielidee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ziel und Spielidee
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neue-werkzeuge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Neue Werkzeuge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erst-uberlegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erst überlegen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bauauftrag-in-etappen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bauauftrag in Etappen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teste-dich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste dich
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zusatzaufgaben" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zusatzaufgaben
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ki-code-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 KI-Code-Review
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vollstandiger-losungscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vollständiger Lösungscode
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="9-python-quest-final-game">9. Python Quest – Final Game</h1>
+<h2 id="ziel-und-spielidee">Ziel und Spielidee</h2>
+<p>Du kombinierst Variablen, Eingaben, Rechnungen, Verzweigungen, Schleifen und Zufall zu einem Text-Adventure. Du betrittst eine Höhle, kämpfst oder fliehst und erhältst bei einem Sieg Gold. Eigene Funktionen und Listen kannst du als Zusatzaufgabe ergänzen; im Grundspiel kommen sie noch nicht vor.</p>
+<h2 id="neue-werkzeuge">Neue Werkzeuge</h2>
+<p><code>random.randint(8, 15)</code> liefert eine zufällige ganze Zahl von 8 bis 15, beide Grenzen eingeschlossen.</p>
+<p><code>while monster_leben &gt; 0 and leben &gt; 0:</code> wiederholt den Kampf, solange <strong>beide</strong> Lebenswerte grösser als 0 sind. <code>and</code> bedeutet «und». Innerhalb der Schleife müssen sich Werte verändern oder ein <code>break</code> muss die Schleife beenden, damit sie nicht endlos läuft.</p>
+<p>Menüeingaben bleiben Text. Vergleiche deshalb mit <code>"2"</code>, nicht mit der Zahl <code>2</code>.</p>
+<h2 id="erst-uberlegen">Erst überlegen</h2>
+<ul>
+<li>Welche Werte brauchst du vor dem Kampf?</li>
+<li>Warum sollte ein besiegtes Monster nicht zurückschlagen?</li>
+<li>Wann brauchst du <code>break</code>?</li>
+<li>Du startest mit 10 Gold und gewinnst 20. Welcher Bestand soll erscheinen?</li>
+</ul>
+<h2 id="bauauftrag-in-etappen">Bauauftrag in Etappen</h2>
+<p>Erstelle die Datei und starte sie nach jeder Etappe.</p>
+<ol>
+<li><strong>Start:</strong> Importiere <code>random</code>, gestalte den Titel und frage <code>name</code> ab. Setze <code>leben</code> auf 100 und <code>gold</code> auf 10. Begrüsse die Person.</li>
+<li><strong>Höhle:</strong> Zeige die Auswahl <code>1 - Höhle betreten</code> und <code>2 - Weglaufen</code>. Frage <code>wahl</code> ab. Bei <code>"2"</code> endet die Geschichte mit einer Meldung. Sonst erscheint ein Monster mit 30 Leben.</li>
+<li><strong>Kampf:</strong> Wiederhole die Runden, solange beide Lebenswerte positiv sind. Zeige die Lebenswerte und die Auswahl <code>1 - Angreifen</code> und <code>2 - Fliehen</code>.</li>
+<li><strong>Flucht:</strong> Frage <code>aktion</code> ab. Bei <code>"2"</code> gib eine Fluchtmeldung aus und beende die Schleife.</li>
+<li><strong>Angriff:</strong> Ermittle 8 bis 15 zufällige Schadenspunkte, ziehe sie vom Monsterleben ab und zeige den Schaden.</li>
+<li><strong>Sieg:</strong> Prüfe sofort, ob das Monster höchstens 0 Leben hat. Gib eine Siegesmeldung aus, addiere 20 Gold, zeige den Bestand und beende die Schleife.</li>
+<li><strong>Gegenangriff:</strong> Lebt das Monster noch, verursacht es 5 bis 12 zufällige Schadenspunkte. Ziehe sie von <code>leben</code> ab und zeige den Schaden.</li>
+<li><strong>Niederlage:</strong> Prüfe nach der Schleife, ob <code>leben &lt;= 0</code> gilt. Gib dann eine Niederlagenmeldung aus.</li>
+</ol>
+<h2 id="tipps">Tipps</h2>
+<p>Die gesamte Kampflogik gehört in den <code>else</code>-Zweig der Höhlenwahl. Die Schleife liegt darin und benötigt eine weitere Einrückung. <code>break</code> verlässt die nächste umgebende Schleife. Prüfe den Sieg mit <code>&lt;= 0</code>, weil Schaden die Monsterleben auch unter null bringen kann.</p>
+<p>Im Grundspiel bedeutet <code>"2"</code> Weglaufen beziehungsweise Fliehen. Jede andere Eingabe führt in die Höhle beziehungsweise zum Angriff. Eine strengere Prüfung ist eine Zusatzaufgabe.</p>
+<h2 id="teste-dich">Teste dich</h2>
+<table>
+<thead>
+<tr>
+<th>Weg</th>
+<th>Eingaben</th>
+<th>Erwartung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nach Hause</td>
+<td>Name, dann <code>2</code></td>
+<td>Ende ohne Kampf</td>
+</tr>
+<tr>
+<td>Flucht</td>
+<td>Name, dann <code>1</code>, dann <code>2</code></td>
+<td>Flucht ohne Angriff oder Belohnung</td>
+</tr>
+<tr>
+<td>Sieg</td>
+<td>Name, dann immer <code>1</code></td>
+<td>Sieg und 30 Gold; kein Gegenangriff nach dem Sieg</td>
+</tr>
+<tr>
+<td>Niederlage</td>
+<td>Vorübergehend <code>leben = 1</code>, dann angreifen</td>
+<td>Niederlage nach dem ersten Gegenangriff</td>
+</tr>
+</tbody>
+</table>
+<p>Stelle nach dem Niederlagentest die Startleben wieder auf 100. Mit den normalen Werten gewinnst du beim fortgesetzten Angreifen in höchstens vier Angriffen; die höchstens drei Gegenangriffe reichen nicht für eine Niederlage. Die Schadenszahlen können bei jedem Start anders sein.</p>
+<h2 id="zusatzaufgaben">Zusatzaufgaben</h2>
+<p>Baue jeweils eine Erweiterung ein und teste sie:</p>
+<ul>
+<li>Frage bei ungültigen Menüeingaben erneut nach.</li>
+<li>Ermittle den Schaden in einer eigenen Funktion.</li>
+<li>Wähle einen Monsternamen zufällig aus einer Liste.</li>
+<li>Ergänze einen Heiltrank oder einen weiteren Raum.</li>
+</ul>
+<p>Erkläre jemandem anhand deines Codes eine Kampfrunde: Woher kommt der Schaden, welcher Wert verändert sich und warum endet der Kampf?</p>
+<h2 id="ki-code-review">🤖 KI-Code-Review</h2>
+<pre><code class="language-text">Du bist mein Python-Tutor.
+
+Ich habe mein Python Quest fertig programmiert.
+
+Programmiere das Spiel nicht neu und gib mir keine verbesserte Komplettlösung.
+
+Hilf mir stattdessen zu überprüfen, ob ich meinen eigenen Code verstanden habe.
+
+Gehe mit mir nacheinander folgende Punkte durch:
+
+1. Lass mich den Ablauf meines Spiels erklären.
+2. Frage mich nach mindestens zwei Variablen und deren Aufgabe.
+3. Suche mit mir eine if/elif/else-Verzweigung und lass mich erklären, warum sie benötigt wird.
+4. Suche mit mir eine Schleife und lass mich erklären, wann sie endet.
+5. Frage mich, wofür random verwendet wird.
+6. Weise mich auf mögliche Fehler oder problematische Stellen hin, ohne sie sofort selbst zu korrigieren.
+7. Stelle mir am Ende drei Verständnisfragen zu meinem eigenen Programm.
+
+Stelle immer nur eine Frage auf einmal und warte auf meine Antwort.
+
+Am Schluss frage mich:
+
+&quot;Kannst du dein Spiel jetzt jemandem erklären, ohne den Code vorzulesen?&quot;
+
+Mein Code:
+
+[MEIN CODE]
+</code></pre>
+<h2 id="vollstandiger-losungscode">Vollständiger Lösungscode</h2>
+<p>Vergleiche erst nach deinem eigenen Versuch. Dieser Code enthält das vollständige Grundspiel; die freiwilligen Zusatzaufgaben sind nicht eingebaut.</p>
+<p>Datei: <code>beispiele/mini-games/09_python_quest.py</code></p>
+<pre><code class="language-python">import random
+
+print(&quot;========================&quot;)
+print(&quot;      PYTHON QUEST&quot;)
+print(&quot;========================&quot;)
+print()
+
+name = input(&quot;Wie heisst du? &quot;)
+leben = 100
+gold = 10
+
+print()
+print(&quot;Hallo&quot;, name + &quot;!&quot;)
+print(&quot;Du stehst vor einer dunklen Höhle.&quot;)
+print(&quot;1 - Höhle betreten&quot;)
+print(&quot;2 - Weglaufen&quot;)
+
+wahl = input(&quot;&gt; &quot;)
+
+if wahl == &quot;2&quot;:
+    print(&quot;Du gehst nach Hause. Ende.&quot;)
+else:
+    monster_leben = 30
+    print()
+    print(&quot;Ein Monster erscheint!&quot;)
+
+    while monster_leben &gt; 0 and leben &gt; 0:
+        print()
+        print(&quot;Dein Leben:&quot;, leben)
+        print(&quot;Monster:&quot;, monster_leben)
+        print(&quot;1 - Angreifen&quot;)
+        print(&quot;2 - Fliehen&quot;)
+
+        aktion = input(&quot;&gt; &quot;)
+
+        if aktion == &quot;2&quot;:
+            print(&quot;Du fliehst aus der Höhle.&quot;)
+            break
+
+        schaden = random.randint(8, 15)
+        monster_leben = monster_leben - schaden
+        print(&quot;Du verursachst&quot;, schaden, &quot;Schaden.&quot;)
+
+        if monster_leben &lt;= 0:
+            print(&quot;Du hast das Monster besiegt!&quot;)
+            gold = gold + 20
+            print(&quot;Du findest 20 Gold.&quot;)
+            print(&quot;Gold:&quot;, gold)
+            break
+
+        monster_schaden = random.randint(5, 12)
+        leben = leben - monster_schaden
+        print(&quot;Das Monster verursacht&quot;, monster_schaden, &quot;Schaden.&quot;)
+
+    if leben &lt;= 0:
+        print(&quot;Du wurdest besiegt.&quot;)
+</code></pre>
+<p><a href="../">Zurück zur Übersicht</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1914 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Erste Schritte mit VS Code für den Python-Kurs">
+      
+      
+      
+      
+        <link rel="prev" href="../python-vscode-installation/">
+      
+      
+        <link rel="next" href="../aufgaben/aufgabe-01/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>VS Code bedienen - Python-Unterricht</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#erste-schritte-mit-vs-code" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href=".." title="Python-Unterricht" class="md-header__button md-logo" aria-label="Python-Unterricht" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python-Unterricht
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              VS Code bedienen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Python-Unterricht" class="md-nav__button md-logo" aria-label="Python-Unterricht" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Python-Unterricht
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startseite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-vscode-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation Python & VS-Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VS Code Erste Schritte
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VS Code Erste Schritte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lernziele" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lernziele
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#die-vier-wichtigsten-bereiche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Die vier wichtigsten Bereiche
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-kursordner-erstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Kursordner erstellen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-kursordner-in-vs-code-offnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Kursordner in VS Code öffnen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-eine-python-datei-erstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Eine Python-Datei erstellen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-den-ersten-python-code-schreiben" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Den ersten Python-Code schreiben
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-datei-speichern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Datei speichern
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-python-interpreter-auswahlen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Python-Interpreter auswählen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-programm-starten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Programm starten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#der-programmierkreislauf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Der Programmierkreislauf
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubung-dein-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übung: Dein Name
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Übung: Dein Name">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erst-uberlegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erst überlegen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dein-programm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dein Programm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#was-geschieht-hier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Was geschieht hier?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-dein-programm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste dein Programm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wenn-etwas-nicht-funktioniert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wenn etwas nicht funktioniert
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wenn etwas nicht funktioniert">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-code-zeigt-select-interpreter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VS Code zeigt «Select Interpreter»
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#die-run-schaltflache-fehlt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Die Run-Schaltfläche fehlt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#das-programm-startet-nicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Das Programm startet nicht
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ich-kann-meinen-code-im-terminal-nicht-bearbeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ich kann meinen Code im Terminal nicht bearbeiten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs-code-wartet-und-macht-nichts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VS Code wartet und macht nichts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#die-falsche-datei-wird-ausgefuhrt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Die falsche Datei wird ausgeführt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#es-erscheint-eine-rote-fehlermeldung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Es erscheint eine rote Fehlermeldung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#das-solltest-du-jetzt-konnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Das solltest du jetzt können
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aufgaben/aufgabe-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Begrüssung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mini-Games
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mini-Games
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/01-game-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Game Intro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/02-variablen-datentypen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Variablen & Datentypen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/03-operatoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Operatoren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/04-input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Eingaben
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/05-verzweigungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Verzweigungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/06-schleifen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Schleifen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/07-listen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Listen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/08-funktionen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Funktionen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mini-games/09-final-game/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Final Game
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🐍 Snake mit KI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🐍 Snake mit KI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake/01-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 – Spielfeld & Snake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake/02-bewegung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2 – Bewegung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake/03-futter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 – Futter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake/04-wachsen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 – Wachsen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake/05-game-over/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 – Game Over
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake/06-punkte-neustart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 – Punkte & Neustart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snake/07-mein-snake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 – Mein Snake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lernziele" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lernziele
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#die-vier-wichtigsten-bereiche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Die vier wichtigsten Bereiche
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-kursordner-erstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Kursordner erstellen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-kursordner-in-vs-code-offnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Kursordner in VS Code öffnen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-eine-python-datei-erstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Eine Python-Datei erstellen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-den-ersten-python-code-schreiben" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Den ersten Python-Code schreiben
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-datei-speichern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Datei speichern
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-python-interpreter-auswahlen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Python-Interpreter auswählen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-programm-starten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Programm starten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#der-programmierkreislauf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Der Programmierkreislauf
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubung-dein-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Übung: Dein Name
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Übung: Dein Name">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erst-uberlegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erst überlegen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dein-programm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dein Programm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#was-geschieht-hier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Was geschieht hier?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-dein-programm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teste dein Programm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wenn-etwas-nicht-funktioniert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wenn etwas nicht funktioniert
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wenn etwas nicht funktioniert">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-code-zeigt-select-interpreter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VS Code zeigt «Select Interpreter»
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#die-run-schaltflache-fehlt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Die Run-Schaltfläche fehlt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#das-programm-startet-nicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Das Programm startet nicht
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ich-kann-meinen-code-im-terminal-nicht-bearbeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ich kann meinen Code im Terminal nicht bearbeiten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs-code-wartet-und-macht-nichts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VS Code wartet und macht nichts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#die-falsche-datei-wird-ausgefuhrt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Die falsche Datei wird ausgeführt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#es-erscheint-eine-rote-fehlermeldung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Es erscheint eine rote Fehlermeldung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#das-solltest-du-jetzt-konnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Das solltest du jetzt können
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="erste-schritte-mit-vs-code">Erste Schritte mit VS Code</h1>
+<p>VS Code ist unser <strong>digitaler Arbeitsplatz zum Programmieren</strong>. Ähnlich wie Word beim Schreiben von Texten hilft, unterstützt uns VS Code beim Schreiben von Programmen.</p>
+<p>Für unseren Kurs brauchst du in VS Code zunächst nur wenige Funktionen. Voraussetzung ist die abgeschlossene <a href="../python-vscode-installation/">Installation von Python und VS Code</a>. Hier lernst du zuerst die Oberfläche kennen. Anschliessend schreibst und startest du deine ersten beiden Programme.</p>
+<h2 id="lernziele">Lernziele</h2>
+<p>Nach dieser Anleitung kannst du:</p>
+<ul>
+<li>einen Kursordner in VS Code öffnen,</li>
+<li>eine Python-Datei erstellen,</li>
+<li>Python-Code schreiben und speichern,</li>
+<li>ein Python-Programm starten,</li>
+<li>Ausgaben und einfache Fehlermeldungen lesen.</li>
+</ul>
+<hr />
+<h2 id="die-vier-wichtigsten-bereiche">Die vier wichtigsten Bereiche</h2>
+<table>
+<thead>
+<tr>
+<th>Bereich</th>
+<th>Erklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Explorer</strong></td>
+<td>Hier siehst du deine Ordner und Dateien.</td>
+</tr>
+<tr>
+<td><strong>Editor</strong></td>
+<td>Hier schreibst und bearbeitest du deinen Python-Code.</td>
+</tr>
+<tr>
+<td><strong>Start-Schaltfläche <code>▶</code></strong></td>
+<td>Damit führst du dein Programm aus.</td>
+</tr>
+<tr>
+<td><strong>Terminal</strong></td>
+<td>Hier erscheinen Ausgaben und Fehlermeldungen.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Wichtig:</strong> VS Code kann sehr viel. Die übrigen Symbole und Funktionen darfst du am Anfang ignorieren.</p>
+</blockquote>
+<hr />
+<h2 id="1-kursordner-erstellen">1. Kursordner erstellen</h2>
+<p>Verwende den Ordner aus der Installation. Falls er noch fehlt, erstelle unter <strong>Dokumente</strong> einen neuen Ordner:</p>
+<pre><code class="language-text">python-kurs
+</code></pre>
+<p>Später kann dieser Ordner beispielsweise so aufgebaut sein:</p>
+<pre><code class="language-text">python-kurs
+├── hallo.py
+├── begruessung.py
+└── mini-games
+    ├── 01_game_intro.py
+    ├── 02_character_creator.py
+    └── ...
+</code></pre>
+<p>Die Dateien entstehen im Laufe der Übungen; <code>begruessung.py</code> gehört zur freiwilligen Zusatzübung. Speichere deine eigenen Spiele unter <code>python-kurs/mini-games</code>. Die fertigen Vorlagen liegen im Kursprojekt unter <code>beispiele/mini-games</code> und stehen auch vollständig auf den Lernseiten.</p>
+<h2 id="2-kursordner-in-vs-code-offnen">2. Kursordner in VS Code öffnen</h2>
+<ol>
+<li>Starte VS Code.</li>
+<li>Wähle <strong>Datei → Ordner öffnen</strong>.</li>
+<li>Wähle den Ordner <code>python-kurs</code> aus.</li>
+<li>Klicke auf <strong>Ordner auswählen</strong>.</li>
+</ol>
+<blockquote>
+<p><strong>Merksatz:</strong> Öffne in VS Code immer den ganzen Kursordner und nicht nur eine einzelne Datei.</p>
+</blockquote>
+<h2 id="3-eine-python-datei-erstellen">3. Eine Python-Datei erstellen</h2>
+<ol>
+<li>Klicke links im Explorer auf <strong>Neue Datei</strong>.</li>
+<li>Gib als Dateinamen ein:</li>
+</ol>
+<pre><code class="language-text">hallo.py
+</code></pre>
+<p>Die Dateiendung <code>.py</code> zeigt dem Computer und VS Code, dass die Datei ein Python-Programm enthält.</p>
+<h2 id="4-den-ersten-python-code-schreiben">4. Den ersten Python-Code schreiben</h2>
+<p>Tippe diesen Code im Editor ab:</p>
+<pre><code class="language-python">print(&quot;Hallo Python!&quot;)
+</code></pre>
+<p>Achte besonders auf:</p>
+<ul>
+<li>die runden Klammern,</li>
+<li>die Anführungszeichen,</li>
+<li>die genaue Schreibweise von <code>print</code>.</li>
+</ul>
+<h2 id="5-datei-speichern">5. Datei speichern</h2>
+<p>Speichere dein Programm mit:</p>
+<table>
+<thead>
+<tr>
+<th>Betriebssystem</th>
+<th>Tastenkombination</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td><code>Ctrl + S</code></td>
+</tr>
+<tr>
+<td>macOS</td>
+<td><code>Cmd + S</code></td>
+</tr>
+</tbody>
+</table>
+<p>Ein weisser Punkt neben dem Dateinamen bedeutet, dass die Datei noch nicht gespeichert wurde.</p>
+<h2 id="6-python-interpreter-auswahlen">6. Python-Interpreter auswählen</h2>
+<p>Der <strong>Interpreter</strong> ist das Programm, das deinen Python-Code ausführt.</p>
+<ol>
+<li>Öffne die Befehlspalette mit <code>Ctrl</code> + <code>Shift</code> + <code>P</code> beziehungsweise <code>Cmd</code> + <code>Shift</code> + <code>P</code>.</li>
+<li>Suche nach <code>Python: Select Interpreter</code>.</li>
+<li>Wähle die installierte Python-3-Version aus.</li>
+</ol>
+<p>Häufig zeigt VS Code die gewählte Version danach unten in der Statusleiste an.</p>
+<h2 id="7-programm-starten">7. Programm starten</h2>
+<p>Klicke oben rechts auf:</p>
+<pre><code class="language-text">▶ Python-Datei ausführen
+</code></pre>
+<p>VS Code öffnet unten ein Terminal. Dort sollte diese Ausgabe erscheinen:</p>
+<pre><code class="language-text">Hallo Python!
+</code></pre>
+<blockquote>
+<p><strong>Merksatz:</strong> Oben im Editor schreibst du das Programm. Unten im Terminal siehst du, was das Programm macht.</p>
+</blockquote>
+<hr />
+<h2 id="der-programmierkreislauf">Der Programmierkreislauf</h2>
+<p>Beim Programmieren wiederholst du immer denselben Ablauf:</p>
+<ol>
+<li>Code schreiben</li>
+<li>Datei speichern</li>
+<li>Programm starten</li>
+<li>Ausgabe prüfen</li>
+<li>Code verbessern</li>
+</ol>
+<blockquote>
+<p><strong>Schreiben – speichern – starten – prüfen – verbessern.</strong></p>
+</blockquote>
+<hr />
+<h2 id="ubung-dein-name">Übung: Dein Name</h2>
+<h3 id="erst-uberlegen">Erst überlegen</h3>
+<ul>
+<li>Wo soll das Programm auf deinen Namen warten?</li>
+<li>Wie kann es sich die Eingabe merken?</li>
+<li>Was sollte sich ändern, wenn jemand anderes das Programm startet?</li>
+</ul>
+<h3 id="dein-programm">Dein Programm</h3>
+<p>Ersetze den bisherigen Code in <code>hallo.py</code> durch dieses vollständige Programm. Es entspricht der Vorlage <code>beispiele/hallo.py</code> im Kursprojekt:</p>
+<pre><code class="language-python">name = input(&quot;Wie heisst du? &quot;)
+print(&quot;Hallo&quot;, name)
+</code></pre>
+<p>Führe danach folgende Schritte aus:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Programm speichern</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Programm starten</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Im Terminal deinen Namen eingeben</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Mit Enter bestätigen</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Ausgabe überprüfen</li>
+</ul>
+<p>Eine mögliche Ausgabe sieht so aus:</p>
+<pre><code class="language-text">Wie heisst du? Alex
+Hallo Alex
+</code></pre>
+<p>Bei <code>input()</code> wartet Python auf eine Eingabe. Klicke dazu zuerst in das Terminal, gib deine Antwort ein und drücke <strong>Enter</strong>. Verwende das <strong>Terminal</strong>, nicht das Fenster <strong>Output/Ausgabe</strong>.</p>
+<h3 id="was-geschieht-hier">Was geschieht hier?</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input(...)</code></td>
+<td>Zeigt eine Frage an und wartet auf eine Eingabe.</td>
+</tr>
+<tr>
+<td><code>name = ...</code></td>
+<td>Speichert die Eingabe in der Variable <code>name</code>.</td>
+</tr>
+<tr>
+<td><code>print(...)</code></td>
+<td>Gibt Text im Terminal aus.</td>
+</tr>
+<tr>
+<td><code>print("Hallo", name)</code></td>
+<td>Gibt die Begrüssung und den Namen mit einem Leerzeichen dazwischen aus.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="teste-dein-programm">Teste dein Programm</h3>
+<p>Starte die Datei nochmals und gib einen anderen Namen ein. Passt sich die Begrüssung an? Prüfe auch einen Namen mit Leerzeichen, zum Beispiel <code>Anna Maria</code>. Erkläre anschliessend, welche Zeile die Eingabe speichert und welche sie ausgibt.</p>
+<hr />
+<h2 id="wenn-etwas-nicht-funktioniert">Wenn etwas nicht funktioniert</h2>
+<h3 id="vs-code-zeigt-select-interpreter">VS Code zeigt «Select Interpreter»</h3>
+<p>Öffne die Befehlspalette und wähle über <strong>Python: Select Interpreter</strong> deine Python-3-Installation aus.</p>
+<h3 id="die-run-schaltflache-fehlt">Die Run-Schaltfläche fehlt</h3>
+<p>Kontrolliere:</p>
+<ul>
+<li>Ist die Datei mit <code>.py</code> gespeichert?</li>
+<li>Ist die Erweiterung <strong>Python von Microsoft</strong> installiert?</li>
+<li>Wurde ein Python-Interpreter ausgewählt?</li>
+</ul>
+<h3 id="das-programm-startet-nicht">Das Programm startet nicht</h3>
+<p>Prüfe:</p>
+<ul>
+<li>Endet der Dateiname auf <code>.py</code>?</li>
+<li>Wurde die Datei gespeichert?</li>
+<li>Ist die richtige Datei im Editor geöffnet?</li>
+<li>Hast du <code>▶ Python-Datei ausführen</code> verwendet?</li>
+</ul>
+<h3 id="ich-kann-meinen-code-im-terminal-nicht-bearbeiten">Ich kann meinen Code im Terminal nicht bearbeiten</h3>
+<p>Das Terminal zeigt die Ausgabe des Programms. Bearbeite den Programmcode oben im Editor.</p>
+<h3 id="vs-code-wartet-und-macht-nichts">VS Code wartet und macht nichts</h3>
+<p>Enthält dein Programm <code>input()</code>, wartet Python auf deine Eingabe. Klicke in das Terminal, gib etwas ein und drücke <strong>Enter</strong>.</p>
+<h3 id="die-falsche-datei-wird-ausgefuhrt">Die falsche Datei wird ausgeführt</h3>
+<p>Klicke vor dem Start im Editor auf die Python-Datei, die du ausführen möchtest.</p>
+<h3 id="es-erscheint-eine-rote-fehlermeldung">Es erscheint eine rote Fehlermeldung</h3>
+<p>Eine Fehlermeldung bedeutet nicht, dass du nicht programmieren kannst. Sie ist eine Nachricht von Python und hilft dir, den Fehler zu finden.</p>
+<ol>
+<li>Lies zuerst die letzte Zeile der Fehlermeldung.</li>
+<li>Suche nach einer angegebenen Zeilennummer.</li>
+<li>Kontrolliere in dieser Zeile Klammern, Anführungszeichen und Schreibweise.</li>
+</ol>
+<hr />
+<h2 id="das-solltest-du-jetzt-konnen">Das solltest du jetzt können</h2>
+<p>Die Häkchen dienen zur Kontrolle und werden nach dem Neuladen nicht gespeichert.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Ich kann meinen Kursordner öffnen.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Ich kann eine <code>.py</code>-Datei erstellen.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Ich kann Python-Code schreiben und speichern.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Ich kann den Python-Interpreter auswählen.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Mein erstes Programm hat <code>Hallo Python!</code> ausgegeben.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Mein Programm mit <code>input()</code> kann meinen Namen einlesen.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Ich kenne den Unterschied zwischen Editor und Terminal.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Ich kann eine einfache Fehlermeldung untersuchen.</li>
+</ul>
+<p>Wenn du alle Punkte abhaken kannst, startest du mit den <a href="../mini-games/">Mini-Games</a>.</p>
+<p>Möchtest du Eingaben vorher noch etwas üben? Löse die freiwillige <a href="../aufgaben/aufgabe-01/">Zusatzübung Begrüssung</a>.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
